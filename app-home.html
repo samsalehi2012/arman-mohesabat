@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>اپ — خانه | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,transform .15s ease,opacity .2s ease;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.96)}
+.scroll{scrollbar-width:none}.scroll::-webkit-scrollbar{display:none}.scroll>*{flex-shrink:0}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.06s}.d2{animation-delay:.12s}.d3{animation-delay:.18s}.d4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.slide{animation:slide .5s cubic-bezier(.2,.7,.2,1) .3s both}
+@keyframes slide{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.bar{transform-origin:right center;animation:grow 1.1s cubic-bezier(.2,.7,.2,1) .4s both}
+@keyframes grow{from{transform:scaleX(0)}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="phone-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="width: 390px; height: 844px; background: #F6F7F6; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="flex: none; padding: 18px 16px 10px; display: flex; align-items: center; justify-content: space-between">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <svg width="34" height="34" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.3"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 11px; color: #5A6B68">آکادمی حسابداری</span></span>
+    </div>
+    <button class="btn" type="button" aria-label="اعلان‌ها — ۲ مورد جدید" style="position: relative; width: 44px; height: 44px; border-radius: 14px; border: 1px solid #E3E8E6; background: #FFFFFF; color: #10201E; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 21h4"></path></svg><span style="position: absolute; top: 10px; left: 11px; width: 8px; height: 8px; border-radius: 50%; background: #B4541A; border: 2px solid #FFFFFF"></span></button>
+  </header>
+
+  <main class="scroll" style="flex: 1; overflow-y: auto; padding: 4px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+
+    <template data-sc="if" value="{{ showInstall }}" hint-placeholder-val="{{ true }}">
+      <div class="slide" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 12px; display: flex; align-items: center; gap: 12px">
+        <span style="flex: none; width: 42px; height: 42px; border-radius: 12px; background: #E3F1EE; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"></rect><path d="M12 7v6M9.5 10.5L12 13l2.5-2.5"></path></svg></span>
+        <span style="flex: 1; display: flex; flex-direction: column; gap: 1px"><span style="font-size: 13px; font-weight: 700">افزودن به صفحه اصلی</span><span style="font-size: 12px; color: #5A6B68">بدون استور، مثل یک اپ کامل</span></span>
+        <button class="btn" type="button" onClick="{{ doInstall }}" style="height: 40px; padding: 0 14px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 13px; font-weight: 700">نصب</button>
+        <button class="btn" type="button" onClick="{{ install }}" aria-label="بستن" style="width: 36px; height: 40px; border: 0; background: transparent; color: #5A6B68; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+      </div>
+    </template>
+
+    <div class="rise" style="display: flex; flex-direction: column; gap: 12px">
+      <h1 style="font-size: 22px; font-weight: 800">سلام، سارا</h1>
+      <label style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 14px; color: #5A6B68">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input type="search" placeholder="جستجوی دوره…" aria-label="جستجوی دوره" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; font-size: 14px; color: #10201E">
+      </label>
+    </div>
+
+    <a href="app-player.html" class="btn rise d1" style="position: relative; overflow: hidden; background: #0B6E63; color: #FFFFFF; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+      <div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 24px 24px"></div>
+      <div style="position: relative; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 12px; opacity: .85">ادامه یادگیری</span><span style="width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13L18 12z" fill="#0B6E63"></path></svg></span></div>
+      <span style="position: relative; font-size: 16px; font-weight: 800; line-height: 1.6">مالیات بر ارزش افزوده و سامانه مؤدیان</span>
+      <span style="position: relative; font-size: 12px; opacity: .85">درس بعدی: ۱۶ · حساب‌های مالیات و عوارض</span>
+      <div style="position: relative; display: flex; align-items: center; gap: 10px"><div style="flex: 1; height: 6px; background: rgba(255,255,255,.25); border-radius: 99px; overflow: hidden"><div class="bar" style="width: 62%; height: 100%; background: #FFFFFF; border-radius: 99px"></div></div><span style="font-size: 13px; font-weight: 800">۶۲٪</span></div>
+    </a>
+
+    <section class="rise d2" style="display: flex; flex-direction: column; gap: 12px">
+      <h2 style="font-size: 17px; font-weight: 800">دوره‌های آکادمی</h2>
+      <div class="scroll" role="group" aria-label="دسته‌بندی" style="display: flex; gap: 8px; overflow-x: auto; margin: 0 -16px; padding: 0 16px">
+        <template data-sc="for" list="{{ cats }}" as="c" hint-placeholder-count="5">
+          <button class="btn" type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" style="flex: none; height: 40px; padding: 0 16px; border-radius: 999px; font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; border: 1px solid {{ c.bd }}; background: {{ c.bg }}; color: {{ c.fg }}">{{ c.label }}</button>
+        </template>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <template data-sc="for" list="{{ list }}" as="k" hint-placeholder-count="4">
+          <a href="app-course.html" class="btn" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 12px; display: flex; gap: 12px; align-items: center; color: #10201E">
+            <span style="flex: none; width: 72px; height: 72px; border-radius: 14px; background: {{ k.tint }}; background-image: linear-gradient(rgba(16,32,30,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(16,32,30,.06) 1px, transparent 1px); background-size: 12px 12px"></span>
+            <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 11px; color: #5A6B68">{{ k.cat }} · {{ k.level }}</span>
+              <span style="font-size: 14px; font-weight: 700; line-height: 1.6">{{ k.title }}</span>
+              <span style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #5A6B68"><span>{{ k.meta }}</span><span style="color: #10201E; font-weight: 800; font-size: 13px">{{ k.price }} <span style="font-weight: 400; color: #5A6B68; font-size: 11px">تومان</span></span></span>
+            </span>
+          </a>
+        </template>
+      </div>
+    </section>
+  </main>
+
+  <nav aria-label="منوی اپ" style="flex: none; background: #FFFFFF; border-top: 1px solid #E3E8E6; padding: 8px 16px 18px; display: flex; justify-content: space-around">
+    <a href="app-home.html" aria-current="page" style="min-width: 72px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #0B6E63; font-size: 11px; font-weight: 700"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg>خانه</a>
+    <a href="app-learning.html" style="min-width: 72px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #5A6B68; font-size: 11px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>یادگیری من</a>
+    <a href="app-profile.html" style="min-width: 72px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #5A6B68; font-size: 11px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>پروفایل</a>
+  </nav>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { cat: 'همه', install: true };
+  }
+  renderVals() {
+    const all = [
+      { title: 'مالیات بر ارزش افزوده و سامانه مؤدیان', cat: 'مالیات', level: 'متوسط', meta: '۲۴ درس · ۹ ساعت', price: '۱٬۸۵۰٬۰۰۰', tint: '#E7ECF2' },
+      { title: 'اصول حسابداری ۱ و ۲', cat: 'حسابداری', level: 'مقدماتی', meta: '۴۲ درس · ۱۶ ساعت', price: '۱٬۴۵۰٬۰۰۰', tint: '#E3F1EE' },
+      { title: 'حسابداری مالیاتی و قانون مالیات‌های مستقیم', cat: 'مالیات', level: 'پیشرفته', meta: '۳۰ درس · ۱۲ ساعت', price: '۲٬۲۰۰٬۰۰۰', tint: '#F4ECE2' },
+      { title: 'اکسل کاربردی برای حسابداران', cat: 'اکسل', level: 'مقدماتی', meta: '۳۶ درس · ۱۴ ساعت', price: '۱٬۲۰۰٬۰۰۰', tint: '#EAF0E4' },
+      { title: 'حقوق و دستمزد و بیمه تأمین اجتماعی', cat: 'حقوق و دستمزد', level: 'متوسط', meta: '۲۰ درس · ۷ ساعت', price: '۹۸۰٬۰۰۰', tint: '#E3F1EE' },
+      { title: 'تهیه صورت‌های مالی و گزارشگری', cat: 'حسابداری', level: 'پیشرفته', meta: '۲۸ درس · ۱۱ ساعت', price: '۲٬۴۵۰٬۰۰۰', tint: '#F4ECE2' }
+    ];
+    const labels = ['همه', 'حسابداری', 'مالیات', 'اکسل', 'حقوق و دستمزد'];
+    const cur = this.state.cat;
+    const cats = labels.map((l) => ({
+      label: l,
+      pressed: cur === l ? 'true' : 'false',
+      bg: cur === l ? '#10201E' : '#FFFFFF',
+      fg: cur === l ? '#FFFFFF' : '#33433F',
+      bd: cur === l ? '#10201E' : '#DCE3E0',
+      pick: () => this.setState({ cat: l })
+    }));
+    return {
+      cats,
+      list: cur === 'همه' ? all : all.filter((c) => c.cat === cur),
+      showInstall: this.state.install,
+      install: () => this.setState({ install: false }),
+      doInstall: () => { if (window.dcInstall) window.dcInstall(); this.setState({ install: false }); }
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

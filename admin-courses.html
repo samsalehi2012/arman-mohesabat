@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پنل مدیریت — دوره‌ها و درس‌ها | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F4F6F5}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.sn{transition:background-color .2s ease,color .2s ease}.sn:hover{background:rgba(255,255,255,.07) !important;color:#FFFFFF !important}
+.lr{transition:background-color .2s ease}.lr:hover{background:#F8FAF9 !important}
+.inp{transition:border-color .2s ease,box-shadow .2s ease}.inp:focus{border-color:#0B6E63 !important;box-shadow:0 0 0 4px rgba(11,110,99,.12);outline:0}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1.15) both}
+@keyframes pop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:none}}
+.new{animation:newrow 1.6s ease both}
+@keyframes newrow{0%{background:#FFF4E8}100%{background:#FFFFFF}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F4F6F5; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+  <aside style="flex: 1 1 250px; max-width: 100%; background: #0F1E1C; color: #FFFFFF; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px">
+    <a href="admin.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 0 6px">
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 12px; color: #A9B8B5">پنل مدیریت آکادمی</span></span>
+    </a>
+    <nav aria-label="منوی مدیریت" style="display: flex; flex-direction: column; gap: 2px; font-size: 14px">
+      <a class="sn" href="admin.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+      <a class="sn" href="admin-students.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+      <a class="sn" href="admin-courses.html" aria-current="page" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها و درس‌ها</a>
+      <a class="sn" href="admin-orders.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M7 15h3"></path></svg>سفارش‌ها و پرداخت‌ها</a>
+      <a class="sn" href="admin-coupons.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>کدهای تخفیف</a>
+      <a class="sn" href="admin-qa.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg><span style="flex: 1">پرسش و پاسخ</span><span style="min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: #F2B98A; color: #10201E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">۷</span></a>
+      <a class="sn" href="admin-certificates.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی‌ها</a>
+      <a class="sn" href="admin-settings.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>تنظیمات سایت</a>
+    </nav>
+  </aside>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 22px clamp(16px, 3vw, 32px) 40px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+      <div style="display: flex; flex-direction: column; gap: 2px">
+        <nav aria-label="مسیر" style="font-size: 13px; color: #5A6B68; display: flex; gap: 6px"><span>دوره‌ها</span><span aria-hidden="true">/</span><span>ویرایش دوره</span></nav>
+        <h1 style="font-size: 22px; font-weight: 800">مالیات بر ارزش افزوده و سامانه مؤدیان</h1>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+        <label style="display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 12px; font-size: 14px; cursor: pointer">
+          <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">منتشر شده
+        </label>
+        <a class="btn bg" href="course.html" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #10201E; font-size: 14px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>پیش‌نمایش</a>
+        <button class="btn bp" type="button" style="height: 44px; padding: 0 20px; border-radius: 12px; border: 0; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700">ذخیره تغییرات</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start">
+      <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+
+        <section class="rise" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 16px">
+          <h2 style="font-size: 16px; font-weight: 800">اطلاعات دوره</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 14px">
+            <label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">عنوان دوره<input class="inp" type="text" value="مالیات بر ارزش افزوده و سامانه مؤدیان" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 14px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">دسته‌بندی<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"><option>مالیات</option><option>حسابداری</option><option>اکسل و نرم‌افزار</option></select></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">سطح<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"><option>متوسط</option><option>مقدماتی</option><option>پیشرفته</option></select></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">قیمت (تومان)<input class="inp" type="text" value="۲٬۲۰۰٬۰۰۰" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 14px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">قیمت با تخفیف<input class="inp" type="text" value="۱٬۸۵۰٬۰۰۰" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 14px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            <label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">معیار تکمیل هر درس (برای درصد پیشرفت)<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"><option>دانشجو دکمه «تکمیل شد» را بزند</option><option>ماندن در صفحه درس به اندازه مدت ویدیو</option><option>هر دو (هرکدام زودتر)</option></select></label>
+          </div>
+        </section>
+
+        <section class="rise d1" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden">
+          <div style="padding: 18px 22px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px">
+            <div style="display: flex; flex-direction: column; gap: 2px"><h2 style="font-size: 16px; font-weight: 800">سرفصل‌ها و درس‌ها</h2><span style="font-size: 13px; color: #5A6B68">{{ totalLabel }}</span></div>
+            <button class="btn bg" type="button" style="height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #10201E; font: inherit; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>فصل جدید</button>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <div style="padding: 12px 22px; border-top: 1px solid #EEF1F0; display: flex; justify-content: space-between; font-size: 14px; background: #FAFBFA"><span style="font-weight: 700">فصل ۱ · آشنایی با ارزش افزوده</span><span style="color: #5A6B68; font-size: 13px">۵ درس</span></div>
+            <div style="padding: 12px 22px; border-top: 1px solid #EEF1F0; display: flex; justify-content: space-between; font-size: 14px; background: #FAFBFA"><span style="font-weight: 700">فصل ۲ · سامانه مؤدیان</span><span style="color: #5A6B68; font-size: 13px">۷ درس</span></div>
+            <div style="padding: 12px 22px; border-top: 1px solid #EEF1F0; display: flex; justify-content: space-between; font-size: 14px; background: #E3F1EE"><span style="font-weight: 800; color: #0B6E63">فصل ۳ · اظهارنامه و دفاتر</span><span style="color: #0B6E63; font-size: 13px; font-weight: 600">{{ sec3Count }}</span></div>
+            <ol style="list-style: none; margin: 0; padding: 0">
+              <template data-sc="for" list="{{ lessons }}" as="l" hint-placeholder-count="7">
+                <li class="{{ l.cls }}" style="display: flex; align-items: center; gap: 12px; padding: 10px 22px; border-top: 1px solid #EEF1F0; font-size: 13px">
+                  <svg style="flex: none; cursor: grab" width="16" height="16" viewBox="0 0 24 24" fill="#9FB0AC" role="img" aria-label="جابجایی"><circle cx="9" cy="6" r="1.6"></circle><circle cx="15" cy="6" r="1.6"></circle><circle cx="9" cy="12" r="1.6"></circle><circle cx="15" cy="12" r="1.6"></circle><circle cx="9" cy="18" r="1.6"></circle><circle cx="15" cy="18" r="1.6"></circle></svg>
+                  <span style="flex: none; width: 24px; color: #5A6B68">{{ l.num }}</span>
+                  <span style="flex: 1; min-width: 0; font-weight: 600">{{ l.title }}</span>
+                  <span dir="ltr" style="flex: none; padding: 2px 8px; background: #F4F6F5; border-radius: 6px; color: #4A5B57; font-size: 12px">{{ l.hash }}</span>
+                  <span style="flex: none; width: 46px; color: #5A6B68">{{ l.dur }}</span>
+                  <template data-sc="if" value="{{ l.free }}" hint-placeholder-val="{{ false }}"><span style="flex: none; padding: 2px 8px; background: #E3F1EE; color: #0B6E63; border-radius: 999px; font-size: 11px; font-weight: 700">رایگان</span></template>
+                  <button class="btn bg" type="button" aria-label="ویرایش درس" style="flex: none; width: 36px; height: 36px; border-radius: 10px; border: 0; background: transparent; color: #4A5B57; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"></path></svg></button>
+                </li>
+              </template>
+            </ol>
+            <div style="padding: 12px 22px; border-top: 1px solid #EEF1F0; display: flex; justify-content: space-between; font-size: 14px; background: #FAFBFA"><span style="font-weight: 700">فصل ۴ · رسیدگی و جمع‌بندی</span><span style="color: #5A6B68; font-size: 13px">۵ درس</span></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Add lesson from Aparat -->
+      <aside class="rise d2" aria-label="افزودن درس از آپارات" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <span style="width: 40px; height: 40px; border-radius: 12px; background: #E3F1EE; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"></path><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"></path></svg></span>
+          <h2 style="font-size: 16px; font-weight: 800">افزودن درس از آپارات</h2>
+        </div>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">لینک ویدیو در آپارات
+          <div style="display: flex; gap: 8px">
+            <input class="inp" type="url" value="https://www.aparat.com/v/Qx7Lm" dir="ltr" style="flex: 1; min-width: 0; height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 13px; color: #10201E; background: #FFFFFF">
+            <button class="btn bg" type="button" onClick="{{ check }}" style="height: 46px; padding: 0 14px; border-radius: 12px; border: 1px solid #10201E; background: #FFFFFF; color: #10201E; font: inherit; font-size: 13px; font-weight: 700">بررسی</button>
+          </div>
+          <span style="font-weight: 400; font-size: 12px; color: #5A6B68; line-height: 1.8">لینک صفحه ویدیو یا کد embed آپارات. ویدیو با پلیر آپارات داخل سایت و اپ پخش می‌شود.</span>
+        </label>
+
+        <template data-sc="if" value="{{ checked }}" hint-placeholder-val="{{ true }}">
+          <div class="pop" style="display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; gap: 12px; align-items: center; padding: 10px; border: 1px solid #CFE3DF; background: #F3F9F7; border-radius: 14px">
+              <span style="flex: none; width: 92px; aspect-ratio: 16 / 9; border-radius: 8px; background: #10201E; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13L18 12z" fill="#FFFFFF"></path></svg></span>
+              <span style="display: flex; flex-direction: column; gap: 2px; font-size: 12px"><span style="display: flex; align-items: center; gap: 6px; color: #0B6E63; font-weight: 700"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>ویدیو پیدا شد</span><span style="color: #4A5B57">شناسه: <span dir="ltr">Qx7Lm</span></span></span>
+            </div>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">عنوان درس<input class="inp" type="text" value="{{ title }}" onChange="{{ setTitle }}" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">فصل<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 10px; font: inherit; font-size: 13px; color: #10201E; background: #FFFFFF"><option>فصل ۳</option><option>فصل ۴</option></select></label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">مدت<input class="inp" type="text" value="۱۸:۳۰" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            </div>
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; cursor: pointer; min-height: 32px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">پیش‌نمایش رایگان (قبل از خرید قابل دیدن)</label>
+            <div style="border: 1.5px dashed #CFD8D5; border-radius: 14px; padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; color: #4A5B57">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 20h14"></path></svg>
+              <span style="font-size: 13px; font-weight: 600">فایل پیوست درس</span>
+              <span style="font-size: 12px; color: #5A6B68">اکسل، PDF یا Word — حداکثر ۲۰ مگابایت</span>
+            </div>
+            <button class="btn bp" type="button" onClick="{{ add }}" style="height: 48px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700">افزودن به سرفصل</button>
+          </div>
+        </template>
+        <template data-sc="if" value="{{ added }}" hint-placeholder-val="{{ false }}">
+          <p class="pop" style="font-size: 13px; color: #0B6E63; font-weight: 600; padding: 10px 12px; background: #F3F9F7; border-radius: 12px">درس به فصل ۳ اضافه شد و برای دانشجویان این دوره نمایش داده می‌شود.</p>
+        </template>
+      </aside>
+    </div>
+  </main>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { checked: true, title: 'بستن حساب‌ها در پایان فصل', extra: [], added: false };
+  }
+  renderVals() {
+    const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    const base = [
+      ['تهیه اظهارنامه فصلی', 'aB3kP', '۲۷:۰۰'], ['ثبت‌های حسابداری خرید و فروش', 'Lm92x', '۲۵:۳۵'], ['تطبیق دفاتر با سامانه', 'Tq4Rz', '۲۳:۴۰'],
+      ['حساب‌های مالیات و عوارض', 'Hn7cW', '۱۹:۵۰'], ['مطالبه و استرداد اعتبار', 'Pk1sD', '۲۱:۱۵'], ['نمونه کامل یک فصل کاری', 'Zx8vB', '۳۲:۲۰'], ['تمرین جامع با فایل اکسل', 'Wr5yM', '۲۲:۰۵']
+    ];
+    const s = this.state;
+    const all = base.map((l) => ({ title: l[0], hash: l[1], dur: l[2], free: false, cls: '' })).concat(s.extra);
+    const lessons = all.map((l, i) => ({ ...l, num: fa(13 + i) }));
+    const total = 5 + 7 + all.length + 5;
+    return {
+      lessons,
+      sec3Count: fa(all.length) + ' درس',
+      totalLabel: '۴ فصل · ' + fa(total) + ' درس',
+      checked: s.checked,
+      added: s.added,
+      title: s.title,
+      setTitle: (e) => this.setState({ title: e.target.value }),
+      check: () => this.setState({ checked: true, added: false }),
+      add: () => this.setState({ extra: this.state.extra.concat([{ title: this.state.title || 'درس جدید', hash: 'Qx7Lm', dur: '۱۸:۳۰', free: false, cls: 'new' }]), checked: false, added: true })
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

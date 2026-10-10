@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پنل مدیریت — دانشجویان | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F4F6F5}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.sn{transition:background-color .2s ease,color .2s ease}.sn:hover{background:rgba(255,255,255,.07) !important;color:#FFFFFF !important}
+.tr{transition:background-color .2s ease}.tr:hover{background:#F8FAF9}
+.barT{transition:width .6s cubic-bezier(.2,.7,.2,1)}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.swap{animation:swap .4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes swap{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F4F6F5; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+  <aside style="flex: 1 1 250px; max-width: 100%; background: #0F1E1C; color: #FFFFFF; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px">
+    <a href="admin.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 0 6px">
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 12px; color: #A9B8B5">پنل مدیریت آکادمی</span></span>
+    </a>
+    <nav aria-label="منوی مدیریت" style="display: flex; flex-direction: column; gap: 2px; font-size: 14px">
+      <a class="sn" href="admin.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+      <a class="sn" href="admin-students.html" aria-current="page" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+      <a class="sn" href="admin-courses.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها و درس‌ها</a>
+      <a class="sn" href="admin-orders.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M7 15h3"></path></svg>سفارش‌ها و پرداخت‌ها</a>
+      <a class="sn" href="admin-coupons.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>کدهای تخفیف</a>
+      <a class="sn" href="admin-qa.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg><span style="flex: 1">پرسش و پاسخ</span><span style="min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: #F2B98A; color: #10201E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">۷</span></a>
+      <a class="sn" href="admin-certificates.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی‌ها</a>
+      <a class="sn" href="admin-settings.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>تنظیمات سایت</a>
+    </nav>
+  </aside>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 22px clamp(16px, 3vw, 32px) 40px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+      <div style="display: flex; flex-direction: column; gap: 2px"><h1 style="font-size: 24px; font-weight: 800">دانشجویان</h1><span style="font-size: 13px; color: #5A6B68">۱٬۲۴۶ دانشجو · ۱۴۸ عضو جدید در ۳۰ روز اخیر</span></div>
+      <div style="display: flex; gap: 10px">
+        <button class="btn bg" type="button" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #10201E; font: inherit; font-size: 14px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>خروجی اکسل</button>
+        <button class="btn bp" type="button" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; border: 0; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>افزودن دانشجو</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px">
+      <label style="flex: 1 1 260px; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 12px; color: #5A6B68">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input type="search" placeholder="نام یا شماره موبایل" aria-label="جستجوی دانشجو" style="flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; font-size: 14px; color: #10201E">
+      </label>
+      <label style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)" for="fc">دوره</label>
+      <select id="fc" style="height: 44px; padding: 0 12px; border: 1px solid #E3E8E6; border-radius: 12px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10201E"><option>همه دوره‌ها</option><option>مالیات بر ارزش افزوده</option><option>اصول حسابداری</option><option>اکسل برای حسابداران</option></select>
+      <label style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)" for="fs">وضعیت</label>
+      <select id="fs" style="height: 44px; padding: 0 12px; border: 1px solid #E3E8E6; border-radius: 12px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10201E"><option>همه وضعیت‌ها</option><option>فعال</option><option>بدون خرید</option><option>مسدود</option></select>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start">
+      <section class="rise" style="flex: 999 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden">
+        <div style="overflow-x: auto">
+          <table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px">
+            <thead><tr style="background: #F6F7F6; color: #5A6B68; text-align: right"><th style="padding: 12px 18px; font-weight: 600">دانشجو</th><th style="padding: 12px; font-weight: 600">دوره‌ها</th><th style="padding: 12px; font-weight: 600; width: 170px">میانگین پیشرفت</th><th style="padding: 12px; font-weight: 600">آخرین فعالیت</th><th style="padding: 12px 18px; font-weight: 600">وضعیت</th></tr></thead>
+            <tbody>
+              <template data-sc="for" list="{{ rows }}" as="r" hint-placeholder-count="8">
+                <tr class="tr" style="border-top: 1px solid #EEF1F0; background: {{ r.bg }}">
+                  <td style="padding: 8px 18px">
+                    <button class="btn" type="button" onClick="{{ r.pick }}" aria-pressed="{{ r.pressed }}" style="min-height: 48px; display: flex; align-items: center; gap: 10px; border: 0; background: transparent; padding: 0; font: inherit; color: #10201E; text-align: right">
+                      <span style="flex: none; width: 36px; height: 36px; border-radius: 11px; background: {{ r.tint }}; color: #10201E; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center">{{ r.ini }}</span>
+                      <span style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">{{ r.name }}</span><span dir="ltr" style="font-size: 12px; color: #5A6B68; text-align: right">{{ r.mobile }}</span></span>
+                    </button>
+                  </td>
+                  <td style="padding: 8px 12px">{{ r.count }}</td>
+                  <td style="padding: 8px 12px"><div style="display: flex; align-items: center; gap: 8px"><div style="flex: 1; height: 6px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="barT" style="height: 100%; width: {{ r.pctCss }}; background: #0B6E63; border-radius: 99px"></div></div><span style="font-weight: 700; min-width: 34px">{{ r.pctLabel }}</span></div></td>
+                  <td style="padding: 8px 12px; color: #5A6B68">{{ r.last }}</td>
+                  <td style="padding: 8px 18px"><span style="padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{ r.stBg }}; color: {{ r.stFg }}">{{ r.status }}</span></td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+        <div style="padding: 12px 18px; border-top: 1px solid #EEF1F0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #5A6B68">
+          <span>نمایش ۱ تا ۸ از ۱٬۲۴۶</span>
+          <div style="display: flex; gap: 6px">
+            <button class="btn bg" type="button" aria-label="صفحه قبل" style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #10201E; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+            <button class="btn bg" type="button" aria-label="صفحه بعد" style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #10201E; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detail panel -->
+      <aside class="rise d1" aria-label="جزئیات دانشجو" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 18px">
+        <div class="swap" style="display: flex; flex-direction: column; gap: 18px">
+          <div style="display: flex; align-items: center; gap: 14px">
+            <span style="flex: none; width: 56px; height: 56px; border-radius: 16px; background: {{ s.tint }}; font-weight: 800; font-size: 17px; display: flex; align-items: center; justify-content: center">{{ s.ini }}</span>
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 17px; font-weight: 800">{{ s.name }}</span><span dir="ltr" style="font-size: 13px; color: #5A6B68; text-align: right">{{ s.mobile }}</span></div>
+            <span style="padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{ s.stBg }}; color: {{ s.stFg }}">{{ s.status }}</span>
+          </div>
+          <dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; font-size: 13px">
+            <div style="padding: 12px; background: #F6F7F6; border-radius: 12px"><dt style="color: #5A6B68; font-size: 12px">عضویت</dt><dd style="margin: 4px 0 0; font-weight: 700">{{ s.joined }}</dd></div>
+            <div style="padding: 12px; background: #F6F7F6; border-radius: 12px"><dt style="color: #5A6B68; font-size: 12px">مجموع پرداخت</dt><dd style="margin: 4px 0 0; font-weight: 700">{{ s.paid }}</dd></div>
+          </dl>
+          <section style="display: flex; flex-direction: column; gap: 10px">
+            <h2 style="font-size: 14px; font-weight: 800">دوره‌ها و پیشرفت</h2>
+            <template data-sc="if" value="{{ s.none }}" hint-placeholder-val="{{ false }}">
+              <p style="font-size: 13px; color: #5A6B68; padding: 12px; border: 1px dashed #D5DDDA; border-radius: 12px">هنوز دوره‌ای خریداری نشده است.</p>
+            </template>
+            <template data-sc="for" list="{{ s.courses }}" as="c" hint-placeholder-count="2">
+              <div style="padding: 12px; border: 1px solid #E3E8E6; border-radius: 14px; display: flex; flex-direction: column; gap: 8px">
+                <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 13px"><span style="font-weight: 700">{{ c.title }}</span><span style="font-weight: 800; color: {{ c.color }}">{{ c.pctLabel }}</span></div>
+                <div style="height: 6px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="barT" style="height: 100%; width: {{ c.pctCss }}; background: {{ c.color }}; border-radius: 99px"></div></div>
+                <span style="font-size: 12px; color: #5A6B68">{{ c.sub }}</span>
+              </div>
+            </template>
+          </section>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700">یادداشت مدیر<textarea rows="2" placeholder="یادداشت داخلی درباره این دانشجو…" style="border: 1px solid #DCE3E0; border-radius: 12px; padding: 10px 12px; font: inherit; font-size: 13px; font-weight: 400; color: #10201E; background: #FFFFFF; resize: vertical"></textarea></label>
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+            <button class="btn bp" type="button" style="grid-column: 1 / -1; height: 46px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>افزودن دسترسی دوره</button>
+            <button class="btn bg" type="button" style="height: 44px; border: 1px solid #DCE3E0; border-radius: 12px; background: #FFFFFF; color: #10201E; font: inherit; font-size: 13px; font-weight: 600">ارسال پیامک</button>
+            <button class="btn bg" type="button" style="height: 44px; border: 1px solid #EAD3C2; border-radius: 12px; background: #FFFFFF; color: #9A4515; font: inherit; font-size: 13px; font-weight: 600">مسدود کردن</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sel: 0 };
+  }
+  renderVals() {
+    const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    const tints = ['#E3F1EE', '#E7ECF2', '#F4ECE2', '#EAF0E4'];
+    const people = [
+      { name: 'سارا محمدی', mobile: '۰۹۱۷ ۱۲۳ ۴۵۶۷', last: 'امروز', status: 'active', joined: '۱۰ مرداد ۱۴۰۵', paid: '۴٬۵۰۰٬۰۰۰ تومان',
+        courses: [['مالیات بر ارزش افزوده', 62, 'آخرین درس: ۱۶ · امروز'], ['اصول حسابداری ۱ و ۲', 28, 'آخرین درس: ۱۲ · ۳ روز پیش'], ['اکسل برای حسابداران', 100, 'تکمیل‌شده · گواهی صادر شد']] },
+      { name: 'مهدی احمدی', mobile: '۰۹۱۲ ۴۴۸ ۲۰۱۳', last: '۱۲ دقیقه پیش', status: 'active', joined: '۱۸ مهر ۱۴۰۵', paid: '۱٬۸۵۰٬۰۰۰ تومان',
+        courses: [['مالیات بر ارزش افزوده', 4, 'آخرین درس: ۱ · امروز']] },
+      { name: 'زهرا نوری', mobile: '۰۹۳۵ ۷۱۰ ۸۸۴۲', last: 'دیروز', status: 'active', joined: '۲ تیر ۱۴۰۵', paid: '۳٬۴۰۰٬۰۰۰ تومان',
+        courses: [['حسابداری مالیاتی', 74, 'آخرین درس: ۲۲ · دیروز'], ['اکسل برای حسابداران', 89, 'آخرین درس: ۳۲ · دیروز']] },
+      { name: 'رضا کاظمی', mobile: '۰۹۱۷ ۵۵۲ ۳۰۹۱', last: '۲ ساعت پیش', status: 'none', joined: '۱۸ مهر ۱۴۰۵', paid: '۰ تومان', courses: [] },
+      { name: 'فاطمه حسینی', mobile: '۰۹۰۱ ۲۳۶ ۷۷۴۰', last: 'امروز', status: 'active', joined: '۲۵ شهریور ۱۴۰۵', paid: '۲٬۴۳۰٬۰۰۰ تومان',
+        courses: [['اصول حسابداری ۱ و ۲', 52, 'آخرین درس: ۲۲ · امروز'], ['حقوق و دستمزد', 18, 'آخرین درس: ۴ · هفته پیش']] },
+      { name: 'علی رضایی', mobile: '۰۹۳۹ ۱۰۴ ۶۵۲۸', last: '۲ روز پیش', status: 'active', joined: '۵ شهریور ۱۴۰۵', paid: '۱٬۸۵۰٬۰۰۰ تومان',
+        courses: [['مالیات بر ارزش افزوده', 58, 'آخرین درس: ۱۴ · ۲ روز پیش']] },
+      { name: 'نرگس کریمی', mobile: '۰۹۱۶ ۸۸۰ ۱۲۷۵', last: '۵ ساعت پیش', status: 'active', joined: '۱۲ خرداد ۱۴۰۵', paid: '۴٬۰۵۰٬۰۰۰ تومان',
+        courses: [['مالیات بر ارزش افزوده', 96, 'آخرین درس: ۲۳ · امروز'], ['حسابداری مالیاتی', 88, 'آخرین درس: ۲۷ · هفته پیش']] },
+      { name: 'امیر صادقی', mobile: '۰۹۱۳ ۶۰۲ ۴۴۱۹', last: '۴۰ روز پیش', status: 'blocked', joined: '۸ اردیبهشت ۱۴۰۵', paid: '۱٬۲۰۰٬۰۰۰ تومان',
+        courses: [['اکسل برای حسابداران', 12, 'آخرین درس: ۴ · ۴۰ روز پیش']] }
+    ];
+    const st = {
+      active: { label: 'فعال', bg: '#E3F1EE', fg: '#0B6E63' },
+      none: { label: 'بدون خرید', bg: '#F1F3F2', fg: '#4A5B57' },
+      blocked: { label: 'مسدود', bg: '#FBEFE4', fg: '#9A4515' }
+    };
+    const sel = this.state.sel;
+    const enrich = (p, i) => {
+      const avg = p.courses.length ? Math.round(p.courses.reduce((a, c) => a + c[1], 0) / p.courses.length) : 0;
+      const parts = p.name.split(' ');
+      return {
+        ...p,
+        ini: parts[0][0] + ' ' + parts[parts.length - 1][0],
+        tint: tints[i % tints.length],
+        status: st[p.status].label, stBg: st[p.status].bg, stFg: st[p.status].fg,
+        count: p.courses.length ? fa(p.courses.length) + ' دوره' : '—',
+        pctLabel: fa(avg) + '٪', pctCss: avg + '%',
+        none: p.courses.length === 0,
+        courses: p.courses.map((c) => ({ title: c[0], pctLabel: fa(c[1]) + '٪', pctCss: c[1] + '%', sub: c[2], color: c[1] === 100 ? '#B4541A' : '#0B6E63' }))
+      };
+    };
+    const rows = people.map((p, i) => ({
+      ...enrich(p, i),
+      bg: i === sel ? '#F1F8F6' : '#FFFFFF',
+      pressed: i === sel ? 'true' : 'false',
+      pick: () => this.setState({ sel: i })
+    }));
+    return { rows, s: rows[sel] };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

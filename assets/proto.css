@@ -1,0 +1,38 @@
+/* لایه نمایشی پروتوتایپ: قاب گوشی، فهرست صفحه‌ها و پیام‌ها */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* صفحه‌های اپ موبایل: روی دسکتاپ داخل قاب گوشی، روی گوشی تمام‌صفحه */
+body.phone-page{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#E4E9E7;padding:32px 0;box-sizing:border-box}
+body.phone-page #dc-root>.am{position:relative;border-radius:44px;box-shadow:0 0 0 10px #10201E,0 50px 100px -40px rgba(16,32,30,.55)}
+@media (max-height:940px) and (min-width:521px){body.phone-page #dc-root>.am{zoom:.86}}
+@media (max-width:520px){
+  body.phone-page{display:block;padding:0;background:#F6F7F6}
+  body.phone-page #dc-root>.am{width:100vw!important;height:100vh!important;height:100dvh!important;border-radius:0;box-shadow:none}
+}
+
+/* پیام کوتاه */
+.proto-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,16px);opacity:0;pointer-events:none;z-index:1000;max-width:min(92vw,420px);padding:12px 18px;border-radius:14px;background:#10201E;color:#FFFFFF;font:500 14px/1.8 'Vazirmatn',Tahoma,sans-serif;direction:rtl;text-align:center;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);transition:opacity .25s ease,transform .25s ease}
+.proto-toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:520px){body.phone-page .proto-toast{bottom:104px}}
+
+/* فهرست همه صفحه‌ها */
+.proto-nav{position:fixed;left:16px;bottom:16px;z-index:999;font-family:'Vazirmatn',Tahoma,sans-serif;direction:rtl}
+.proto-nav-btn{display:flex;align-items:center;gap:8px;height:44px;padding:0 16px;border:0;border-radius:999px;background:rgba(16,32,30,.92);color:#FFFFFF;font:600 13px 'Vazirmatn',Tahoma,sans-serif;cursor:pointer;box-shadow:0 12px 30px -12px rgba(0,0,0,.5);transition:transform .15s ease}
+.proto-nav-btn:active{transform:scale(.96)}
+.proto-nav-panel{position:absolute;left:0;bottom:54px;width:min(300px,calc(100vw - 32px));max-height:min(72vh,600px);overflow-y:auto;background:#FFFFFF;border:1px solid #E3E8E6;border-radius:18px;padding:12px;box-shadow:0 30px 60px -24px rgba(16,32,30,.45);color:#10201E}
+.proto-nav-head{display:flex;flex-direction:column;gap:2px;padding:4px 8px 10px;border-bottom:1px solid #EEF1F0}
+.proto-nav-head b{font-size:14px}
+.proto-nav-head span{font-size:12px;color:#5A6B68}
+.proto-nav-group{display:flex;flex-direction:column;padding:8px 0 2px}
+.proto-nav-gt{font-size:11px;font-weight:700;color:#5A6B68;padding:4px 10px}
+.proto-nav-group a{display:block;padding:8px 10px;border-radius:10px;color:#10201E;text-decoration:none;font-size:13px}
+.proto-nav-group a:hover{background:#F2F5F4}
+.proto-nav-group a[aria-current=page]{background:#E3F1EE;color:#0B6E63;font-weight:700}
+.proto-nav-btn:focus-visible,.proto-nav-group a:focus-visible{outline:2px solid #0B6E63;outline-offset:2px}
+@media (max-width:520px){
+  .proto-nav{left:8px;bottom:12px}
+  body.phone-page .proto-nav{bottom:90px}
+  .proto-nav-btn{width:40px;height:40px;padding:0;justify-content:center;opacity:.78}
+  .proto-nav-btn span{display:none}
+}

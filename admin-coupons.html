@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پنل مدیریت — کدهای تخفیف | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F4F6F5}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.sn{transition:background-color .2s ease,color .2s ease}.sn:hover{background:rgba(255,255,255,.07) !important;color:#FFFFFF !important}
+.tr{transition:background-color .2s ease}.tr:hover{background:#F8FAF9}
+.knob{transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.trk{transition:background-color .25s ease}
+.inp{transition:border-color .2s ease,box-shadow .2s ease}.inp:focus{border-color:#0B6E63 !important;box-shadow:0 0 0 4px rgba(11,110,99,.12);outline:0}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.bar{transform-origin:right center;animation:grow 1s cubic-bezier(.2,.7,.2,1) .3s both}
+@keyframes grow{from{transform:scaleX(0)}}
+.new{animation:newrow 1.8s ease both}
+@keyframes newrow{0%{background:#FFF4E8}100%{background:#FFFFFF}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F4F6F5; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+  <aside style="flex: 1 1 250px; max-width: 100%; background: #0F1E1C; color: #FFFFFF; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px">
+    <a href="admin.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 0 6px">
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 12px; color: #A9B8B5">پنل مدیریت آکادمی</span></span>
+    </a>
+    <nav aria-label="منوی مدیریت" style="display: flex; flex-direction: column; gap: 2px; font-size: 14px">
+      <a class="sn" href="admin.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+      <a class="sn" href="admin-students.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+      <a class="sn" href="admin-courses.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها و درس‌ها</a>
+      <a class="sn" href="admin-orders.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M7 15h3"></path></svg>سفارش‌ها و پرداخت‌ها</a>
+      <a class="sn" href="admin-coupons.html" aria-current="page" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>کدهای تخفیف</a>
+      <a class="sn" href="admin-qa.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg><span style="flex: 1">پرسش و پاسخ</span><span style="min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: #F2B98A; color: #10201E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">۷</span></a>
+      <a class="sn" href="admin-certificates.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی‌ها</a>
+      <a class="sn" href="admin-settings.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>تنظیمات سایت</a>
+    </nav>
+  </aside>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 22px clamp(16px, 3vw, 32px) 40px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <h1 style="font-size: 24px; font-weight: 800">کدهای تخفیف</h1>
+      <span style="font-size: 13px; color: #5A6B68">{{ summary }}</span>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start">
+      <section class="rise" style="flex: 999 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden">
+        <div style="overflow-x: auto">
+          <table style="width: 100%; min-width: 660px; border-collapse: collapse; font-size: 13px">
+            <thead><tr style="background: #F6F7F6; color: #5A6B68; text-align: right"><th style="padding: 12px 18px; font-weight: 600">کد</th><th style="padding: 12px; font-weight: 600">تخفیف</th><th style="padding: 12px; font-weight: 600">دوره</th><th style="padding: 12px; font-weight: 600; width: 150px">استفاده</th><th style="padding: 12px; font-weight: 600">اعتبار تا</th><th style="padding: 12px 18px; font-weight: 600">فعال</th></tr></thead>
+            <tbody>
+              <template data-sc="for" list="{{ rows }}" as="c" hint-placeholder-count="5">
+                <tr class="{{ c.cls }}" style="border-top: 1px solid #EEF1F0">
+                  <td style="padding: 14px 18px"><span dir="ltr" style="display: inline-block; padding: 4px 10px; border: 1px dashed {{ c.codeBd }}; border-radius: 8px; font-weight: 800; letter-spacing: .04em; color: {{ c.codeFg }}">{{ c.code }}</span></td>
+                  <td style="padding: 14px 12px; font-weight: 700">{{ c.value }}</td>
+                  <td style="padding: 14px 12px">{{ c.course }}</td>
+                  <td style="padding: 14px 12px"><div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; color: #4A5B57">{{ c.usage }}</span><div style="height: 5px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: {{ c.usePct }}; background: {{ c.useColor }}; border-radius: 99px"></div></div></div></td>
+                  <td style="padding: 14px 12px; color: {{ c.expFg }}">{{ c.exp }}</td>
+                  <td style="padding: 14px 18px">
+                    <button class="btn" type="button" role="switch" aria-checked="{{ c.on }}" aria-label="{{ c.switchLabel }}" onClick="{{ c.toggle }}" style="width: 48px; height: 28px; padding: 0; border: 0; background: transparent; display: flex; align-items: center">
+                      <span class="trk" style="position: relative; width: 44px; height: 24px; border-radius: 99px; background: {{ c.trk }}; display: block"><span class="knob" style="position: absolute; top: 3px; right: 3px; width: 18px; height: 18px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 1px 3px rgba(0,0,0,.25); transform: {{ c.knob }}"></span></span>
+                    </button>
+                  </td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="rise d1" aria-label="ساخت کد تخفیف" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+        <h2 style="font-size: 16px; font-weight: 800">کد تخفیف جدید</h2>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">کد
+          <span style="display: flex; gap: 8px"><input class="inp" type="text" value="{{ code }}" onChange="{{ setCode }}" dir="ltr" style="flex: 1; min-width: 0; height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 15px; font-weight: 700; color: #10201E; background: #FFFFFF; text-transform: uppercase"><button class="btn bg" type="button" onClick="{{ gen }}" style="height: 46px; padding: 0 12px; border: 1px solid #DCE3E0; border-radius: 12px; background: #FFFFFF; color: #10201E; font: inherit; font-size: 13px; font-weight: 600">ساخت خودکار</button></span>
+        </label>
+        <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px">
+          <legend style="font-size: 13px; font-weight: 600; margin-bottom: 6px">نوع تخفیف</legend>
+          <div style="display: flex; padding: 4px; background: #EBEFEE; border-radius: 12px">
+            <button class="btn" type="button" onClick="{{ setPct }}" aria-pressed="{{ pctOn }}" style="flex: 1; height: 38px; border: 0; border-radius: 9px; font: inherit; font-size: 13px; font-weight: 700; background: {{ pctBg }}; color: {{ pctFg }}">درصدی</button>
+            <button class="btn" type="button" onClick="{{ setFix }}" aria-pressed="{{ fixOn }}" style="flex: 1; height: 38px; border: 0; border-radius: 9px; font: inherit; font-size: 13px; font-weight: 700; background: {{ fixBg }}; color: {{ fixFg }}">مبلغ ثابت</button>
+          </div>
+        </fieldset>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">{{ valueLabel }}<input class="inp" type="text" value="{{ amount }}" onChange="{{ setAmount }}" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 15px; color: #10201E; background: #FFFFFF"></label>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">برای دوره<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 10px; font: inherit; font-size: 13px; color: #10201E; background: #FFFFFF"><option>همه دوره‌ها</option><option>مالیات بر ارزش افزوده</option><option>حسابداری مالیاتی</option><option>اصول حسابداری ۱ و ۲</option><option>اکسل برای حسابداران</option></select></label>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">سقف استفاده<input class="inp" type="text" value="۱۰۰" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">اعتبار تا<input class="inp" type="text" value="۳۰ آبان ۱۴۰۵" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+        </div>
+        <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; min-height: 32px; cursor: pointer"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">هر دانشجو فقط یک بار</label>
+        <button class="btn bp" type="button" onClick="{{ create }}" style="height: 48px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700">ساخت کد تخفیف</button>
+        <template data-sc="if" value="{{ made }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size: 13px; color: #0B6E63; font-weight: 600; padding: 10px 12px; background: #F3F9F7; border-radius: 12px">کد ساخته شد و از همین حالا در صفحه پرداخت قابل استفاده است.</p>
+        </template>
+      </aside>
+    </div>
+  </main>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        { code: 'ARMAN10', value: '۱۰٪', course: 'همه دوره‌ها', used: 48, max: 100, exp: '۳۰ مهر ۱۴۰۵', on: true, cls: '' },
+        { code: 'PAYIZ20', value: '۲۰٪', course: 'حسابداری مالیاتی', used: 12, max: 50, exp: '۱۵ آبان ۱۴۰۵', on: true, cls: '' },
+        { code: 'WELCOME', value: '۲۰۰٬۰۰۰ تومان', course: 'همه دوره‌ها', used: 131, max: 0, exp: 'بدون انقضا', on: true, cls: '' },
+        { code: 'QESHM15', value: '۱۵٪', course: 'اکسل برای حسابداران', used: 30, max: 30, exp: 'سقف پر شد', on: false, cls: '' },
+        { code: 'NOWRUZ05', value: '۵٪', course: 'همه دوره‌ها', used: 200, max: 200, exp: 'منقضی شده', on: false, cls: '' }
+      ],
+      code: 'ZEMESTAN15', type: 'pct', amount: '۱۵', made: false
+    };
+  }
+  renderVals() {
+    const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    const s = this.state;
+    const rows = s.items.map((c, i) => {
+      const pct = c.max ? Math.min(100, Math.round((c.used / c.max) * 100)) : 40;
+      const ended = c.exp === 'منقضی شده' || c.exp === 'سقف پر شد';
+      return {
+        ...c,
+        usage: fa(c.used) + (c.max ? ' از ' + fa(c.max) : ' بار · بدون سقف'),
+        usePct: pct + '%', useColor: pct >= 100 ? '#B4541A' : '#0B6E63',
+        expFg: ended ? '#9A4515' : '#4A5B57',
+        codeBd: c.on ? '#0B6E63' : '#CFD8D5', codeFg: c.on ? '#0B6E63' : '#8A9794',
+        on: c.on ? 'true' : 'false',
+        switchLabel: 'فعال بودن کد ' + c.code,
+        trk: c.on ? '#0B6E63' : '#CFD8D5',
+        knob: c.on ? 'translateX(0)' : 'translateX(-20px)',
+        toggle: () => this.setState({ items: this.state.items.map((x, k) => (k === i ? { ...x, on: !x.on } : x)) })
+      };
+    });
+    const active = s.items.filter((c) => c.on).length;
+    const isPct = s.type === 'pct';
+    return {
+      rows,
+      summary: fa(s.items.length) + ' کد · ' + fa(active) + ' فعال',
+      code: s.code, amount: s.amount, made: s.made,
+      valueLabel: isPct ? 'درصد تخفیف' : 'مبلغ تخفیف (تومان)',
+      pctOn: isPct ? 'true' : 'false', fixOn: isPct ? 'false' : 'true',
+      pctBg: isPct ? '#FFFFFF' : 'transparent', pctFg: isPct ? '#10201E' : '#4A5B57',
+      fixBg: isPct ? 'transparent' : '#FFFFFF', fixFg: isPct ? '#4A5B57' : '#10201E',
+      setPct: () => this.setState({ type: 'pct', amount: '۱۵' }),
+      setFix: () => this.setState({ type: 'fix', amount: '۲۰۰٬۰۰۰' }),
+      setCode: (e) => this.setState({ code: String(e.target.value).toUpperCase() }),
+      setAmount: (e) => this.setState({ amount: e.target.value }),
+      gen: () => {
+        const abc = 'ABCDEFGHJKLMNPQRSTUVWXYZ';
+        let c = 'AM';
+        for (let k = 0; k < 4; k++) c += abc[Math.floor(Math.random() * abc.length)];
+        this.setState({ code: c + '10', made: false });
+      },
+      create: () => {
+        const st = this.state;
+        const value = st.type === 'pct' ? st.amount + '٪' : st.amount + ' تومان';
+        this.setState({
+          items: [{ code: st.code || 'NEWCODE', value, course: 'همه دوره‌ها', used: 0, max: 100, exp: '۳۰ آبان ۱۴۰۵', on: true, cls: 'new' }].concat(st.items),
+          made: true
+        });
+      }
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پنل مدیریت — پیشخوان | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F4F6F5}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.sn{transition:background-color .2s ease,color .2s ease}.sn:hover{background:rgba(255,255,255,.07) !important;color:#FFFFFF !important}
+.tr{transition:background-color .2s ease}.tr:hover{background:#F8FAF9}
+.wk{transition:opacity .2s ease}.wk:hover{opacity:.75}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.06s}.d2{animation-delay:.12s}.d3{animation-delay:.18s}.d4{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.col{transform-origin:bottom center;animation:colg .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes colg{from{transform:scaleY(0)}}
+.bar{transform-origin:right center;animation:grow 1.1s cubic-bezier(.2,.7,.2,1) .4s both}
+@keyframes grow{from{transform:scaleX(0)}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F4F6F5; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+  <!-- Sidebar -->
+  <aside style="flex: 1 1 250px; max-width: 100%; background: #0F1E1C; color: #FFFFFF; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px">
+    <a href="admin.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 0 6px">
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 12px; color: #A9B8B5">پنل مدیریت آکادمی</span></span>
+    </a>
+    <nav aria-label="منوی مدیریت" style="display: flex; flex-direction: column; gap: 2px; font-size: 14px">
+      <a class="sn" href="admin.html" aria-current="page" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+      <a class="sn" href="admin-students.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+      <a class="sn" href="admin-courses.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها و درس‌ها</a>
+      <a class="sn" href="admin-orders.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M7 15h3"></path></svg>سفارش‌ها و پرداخت‌ها</a>
+      <a class="sn" href="admin-coupons.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>کدهای تخفیف</a>
+      <a class="sn" href="admin-qa.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg><span style="flex: 1">پرسش و پاسخ</span><span style="min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: #F2B98A; color: #10201E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">۷</span></a>
+      <a class="sn" href="admin-certificates.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی‌ها</a>
+      <a class="sn" href="admin-settings.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>تنظیمات سایت</a>
+    </nav>
+    <div style="margin-top: auto; padding: 14px; border-radius: 16px; background: rgba(255,255,255,.06); display: flex; align-items: center; gap: 10px">
+      <span style="width: 38px; height: 38px; border-radius: 12px; background: #F2B98A; color: #10201E; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center">م</span>
+      <span style="flex: 1; display: flex; flex-direction: column; line-height: 1.4"><span style="font-size: 13px; font-weight: 700">مدیر سایت</span><span style="font-size: 11px; color: #A9B8B5">دسترسی کامل</span></span>
+      <a href="index.html" aria-label="خروج" style="color: #A9B8B5; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path></svg></a>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <main style="flex: 999 1 640px; min-width: 0; padding: 22px clamp(16px, 3vw, 32px) 40px; display: flex; flex-direction: column; gap: 22px">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+      <h1 style="font-size: 24px; font-weight: 800">پیشخوان</h1>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+        <label style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 12px; color: #5A6B68">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input type="search" placeholder="جستجوی دانشجو، دوره یا سفارش" aria-label="جستجو" style="border: 0; outline: 0; background: transparent; font: inherit; font-size: 14px; width: 220px; color: #10201E">
+        </label>
+        <label style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)" for="range">بازه زمانی</label>
+        <select id="range" style="height: 44px; padding: 0 12px; border: 1px solid #E3E8E6; border-radius: 12px; background: #FFFFFF; font: inherit; font-size: 14px; color: #10201E"><option>۳۰ روز اخیر</option><option>۷ روز اخیر</option><option>امسال</option></select>
+        <a class="btn bp" href="admin-courses.html" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font-size: 14px; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>افزودن درس از آپارات</a>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 14px">
+      <div class="rise" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 13px; color: #5A6B68">فروش ۳۰ روز اخیر</span>
+        <span style="font-size: 26px; font-weight: 800">۱۸۶٫۴ <span style="font-size: 13px; font-weight: 500; color: #5A6B68">میلیون تومان</span></span>
+        <span style="font-size: 12px; color: #0B6E63; font-weight: 600">▲ ۱۲٪ نسبت به ماه قبل</span>
+      </div>
+      <div class="rise d1" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 13px; color: #5A6B68">دانشجوی جدید</span>
+        <span style="font-size: 26px; font-weight: 800">۱۴۸</span>
+        <span style="font-size: 12px; color: #0B6E63; font-weight: 600">▲ ۸٪ نسبت به ماه قبل</span>
+      </div>
+      <div class="rise d2" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 13px; color: #5A6B68">ثبت‌نام در دوره‌ها</span>
+        <span style="font-size: 26px; font-weight: 800">۲۱۳</span>
+        <span style="font-size: 12px; color: #5A6B68">۹۴٪ پرداخت موفق</span>
+      </div>
+      <div class="rise d3" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-size: 13px; color: #5A6B68">میانگین پیشرفت دانشجویان</span>
+        <span style="font-size: 26px; font-weight: 800">۴۷٪</span>
+        <div style="height: 6px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: 47%; background: #0B6E63; border-radius: 99px"></div></div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: stretch">
+      <section class="rise d2" style="flex: 999 1 460px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><h2 style="font-size: 16px; font-weight: 800">فروش هفتگی</h2><span style="font-size: 12px; color: #5A6B68">میلیون تومان · ۱۲ هفته اخیر</span></div>
+        <div role="img" aria-label="نمودار فروش هفتگی ۱۲ هفته اخیر، بیشترین مقدار در هفته جاری" style="display: flex; gap: 12px; height: 240px">
+          <div aria-hidden="true" style="display: flex; flex-direction: column; justify-content: space-between; font-size: 11px; color: #5A6B68; padding-bottom: 24px"><span>۶۰</span><span>۴۰</span><span>۲۰</span><span>۰</span></div>
+          <div style="flex: 1; position: relative; display: flex; align-items: flex-end; gap: 10px; padding-bottom: 24px; background-image: linear-gradient(#EEF1F0 1px, transparent 1px); background-size: 100% 72px; background-position: 0 -1px">
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 6px; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 40%; background: #CFE3DF; border-radius: 6px 6px 2px 2px"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۱</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 52%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .04s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۲</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 46%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .08s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۳</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 58%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .12s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۴</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 50%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .16s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۵</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 63%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .2s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۶</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 55%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .24s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۷</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 61%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .28s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۸</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 70%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .32s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۹</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 66%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .36s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۱۰</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span class="col" style="width: 100%; max-width: 34px; height: 74%; background: #CFE3DF; border-radius: 6px 6px 2px 2px; animation-delay: .4s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #5A6B68">۱۱</span></span>
+            <span class="wk" style="flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative"><span style="position: absolute; top: calc(100% - 82% - 30px); padding: 2px 8px; background: #10201E; color: #FFFFFF; border-radius: 8px; font-size: 11px; white-space: nowrap">۴۹٫۱</span><span class="col" style="width: 100%; max-width: 34px; height: 82%; background: #0B6E63; border-radius: 6px 6px 2px 2px; animation-delay: .44s"></span><span style="position: absolute; bottom: -22px; font-size: 11px; color: #10201E; font-weight: 700">این هفته</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="rise d3" style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 16px">
+        <h2 style="font-size: 16px; font-weight: 800">فروش به تفکیک دوره</h2>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 13px">
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px"><span>مالیات بر ارزش افزوده و مؤدیان</span><span style="font-weight: 700">۶۲٫۹</span></div><div style="height: 8px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: 100%; background: #0B6E63; border-radius: 99px"></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px"><span>حسابداری مالیاتی</span><span style="font-weight: 700">۴۴٫۰</span></div><div style="height: 8px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: 70%; background: #0B6E63; border-radius: 99px; animation-delay: .5s"></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px"><span>اصول حسابداری ۱ و ۲</span><span style="font-weight: 700">۳۴٫۸</span></div><div style="height: 8px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: 55%; background: #0B6E63; border-radius: 99px; animation-delay: .6s"></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px"><span>اکسل برای حسابداران</span><span style="font-weight: 700">۲۶٫۴</span></div><div style="height: 8px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: 42%; background: #0B6E63; border-radius: 99px; animation-delay: .7s"></div></div></div>
+          <div style="display: flex; flex-direction: column; gap: 6px"><div style="display: flex; justify-content: space-between; gap: 8px"><span>سایر دوره‌ها</span><span style="font-weight: 700">۱۸٫۳</span></div><div style="height: 8px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="height: 100%; width: 29%; background: #9FB5B0; border-radius: 99px; animation-delay: .8s"></div></div></div>
+        </div>
+        <span style="font-size: 12px; color: #5A6B68">ارقام به میلیون تومان</span>
+      </section>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start">
+      <section class="rise d3" style="flex: 999 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 22px; overflow: hidden">
+        <div style="padding: 18px 22px; display: flex; justify-content: space-between; align-items: center"><h2 style="font-size: 16px; font-weight: 800">آخرین خریدها</h2><a href="admin-orders.html" style="font-size: 13px; font-weight: 600">همه سفارش‌ها</a></div>
+        <div style="overflow-x: auto">
+          <table style="width: 100%; min-width: 600px; border-collapse: collapse; font-size: 13px">
+            <thead><tr style="background: #F6F7F6; color: #5A6B68; text-align: right"><th style="padding: 12px 22px; font-weight: 600">دانشجو</th><th style="padding: 12px; font-weight: 600">دوره</th><th style="padding: 12px; font-weight: 600">مبلغ (تومان)</th><th style="padding: 12px; font-weight: 600">زمان</th><th style="padding: 12px 22px; font-weight: 600">وضعیت</th></tr></thead>
+            <tbody>
+              <tr class="tr" style="border-top: 1px solid #EEF1F0"><td style="padding: 14px 22px"><a href="admin-students.html" style="color: #10201E; font-weight: 600">مهدی احمدی</a></td><td style="padding: 14px 12px">مالیات بر ارزش افزوده</td><td style="padding: 14px 12px">۱٬۸۵۰٬۰۰۰</td><td style="padding: 14px 12px; color: #5A6B68">۱۲ دقیقه پیش</td><td style="padding: 14px 22px"><span style="padding: 3px 10px; background: #E3F1EE; color: #0B6E63; border-radius: 999px; font-size: 12px; font-weight: 700">موفق</span></td></tr>
+              <tr class="tr" style="border-top: 1px solid #EEF1F0"><td style="padding: 14px 22px"><a href="admin-students.html" style="color: #10201E; font-weight: 600">زهرا نوری</a></td><td style="padding: 14px 12px">اکسل برای حسابداران</td><td style="padding: 14px 12px">۱٬۲۰۰٬۰۰۰</td><td style="padding: 14px 12px; color: #5A6B68">۴۰ دقیقه پیش</td><td style="padding: 14px 22px"><span style="padding: 3px 10px; background: #E3F1EE; color: #0B6E63; border-radius: 999px; font-size: 12px; font-weight: 700">موفق</span></td></tr>
+              <tr class="tr" style="border-top: 1px solid #EEF1F0"><td style="padding: 14px 22px"><a href="admin-students.html" style="color: #10201E; font-weight: 600">رضا کاظمی</a></td><td style="padding: 14px 12px">حسابداری مالیاتی</td><td style="padding: 14px 12px">۲٬۲۰۰٬۰۰۰</td><td style="padding: 14px 12px; color: #5A6B68">۲ ساعت پیش</td><td style="padding: 14px 22px"><span style="padding: 3px 10px; background: #FBEFE4; color: #9A4515; border-radius: 999px; font-size: 12px; font-weight: 700">ناموفق</span></td></tr>
+              <tr class="tr" style="border-top: 1px solid #EEF1F0"><td style="padding: 14px 22px"><a href="admin-students.html" style="color: #10201E; font-weight: 600">فاطمه حسینی</a></td><td style="padding: 14px 12px">اصول حسابداری ۱ و ۲</td><td style="padding: 14px 12px">۱٬۴۵۰٬۰۰۰</td><td style="padding: 14px 12px; color: #5A6B68">امروز ۰۹:۱۵</td><td style="padding: 14px 22px"><span style="padding: 3px 10px; background: #E3F1EE; color: #0B6E63; border-radius: 999px; font-size: 12px; font-weight: 700">موفق</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="rise d4" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+        <h2 style="font-size: 16px; font-weight: 800">نیاز به رسیدگی</h2>
+        <a class="btn bg" href="admin-qa.html" style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E3E8E6; border-radius: 14px; color: #10201E; background: #FFFFFF"><span style="width: 40px; height: 40px; border-radius: 12px; background: #FBEFE4; color: #9A4515; font-weight: 800; display: flex; align-items: center; justify-content: center">۷</span><span style="flex: 1; font-size: 14px">پرسش بی‌پاسخ دانشجویان</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A9794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+        <a class="btn bg" href="admin-orders.html" style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E3E8E6; border-radius: 14px; color: #10201E; background: #FFFFFF"><span style="width: 40px; height: 40px; border-radius: 12px; background: #F4F6F5; color: #33433F; font-weight: 800; display: flex; align-items: center; justify-content: center">۲</span><span style="flex: 1; font-size: 14px">پرداخت ناموفق برای پیگیری</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A9794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+        <a class="btn bg" href="admin-courses.html" style="display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid #E3E8E6; border-radius: 14px; color: #10201E; background: #FFFFFF"><span style="width: 40px; height: 40px; border-radius: 12px; background: #E3F1EE; color: #0B6E63; font-weight: 800; display: flex; align-items: center; justify-content: center">۱</span><span style="flex: 1; font-size: 14px">دوره پیش‌نویس، آماده انتشار</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A9794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></a>
+      </section>
+    </div>
+  </main>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

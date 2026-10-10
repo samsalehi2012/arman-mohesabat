@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>اپ مدیریت — دوره‌ها و افزودن درس | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,transform .15s ease;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.97)}
+.scroll{scrollbar-width:none}.scroll::-webkit-scrollbar{display:none}.scroll>*{flex-shrink:0}
+.inp{transition:border-color .2s ease,box-shadow .2s ease}.inp:focus{border-color:#0B6E63 !important;box-shadow:0 0 0 4px rgba(11,110,99,.12);outline:0}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1.15) both}
+@keyframes pop{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:none}}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.new{animation:newrow 1.6s ease both}
+@keyframes newrow{0%{background:#FFF4E8}100%{background:#FFFFFF}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="phone-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="width: 390px; height: 844px; background: #F4F6F5; display: flex; flex-direction: column; overflow: hidden">
+
+  <header style="flex: none; padding: 18px 16px 10px; display: flex; flex-direction: column; gap: 12px">
+    <h1 style="font-size: 22px; font-weight: 800">دوره‌ها و درس‌ها</h1>
+    <div role="tablist" aria-label="بخش" style="display: flex; padding: 4px; background: #E7ECEA; border-radius: 14px">
+      <template data-sc="for" list="{{ tabs }}" as="t" hint-placeholder-count="2">
+        <button class="btn" type="button" role="tab" aria-selected="{{ t.sel }}" onClick="{{ t.pick }}" style="flex: 1; height: 40px; border: 0; border-radius: 11px; font: inherit; font-size: 13px; font-weight: {{ t.fw }}; background: {{ t.bg }}; color: {{ t.fg }}; box-shadow: {{ t.sh }}">{{ t.label }}</button>
+      </template>
+    </div>
+  </header>
+
+  <main class="scroll" style="flex: 1; overflow-y: auto; padding: 4px 16px 20px">
+
+    <template data-sc="if" value="{{ vAdd }}" hint-placeholder-val="{{ true }}">
+      <div class="fade" style="display: flex; flex-direction: column; gap: 12px">
+        <section style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 12px">
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">دوره<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 10px; font: inherit; font-size: 13px; color: #10201E; background: #FFFFFF"><option>مالیات بر ارزش افزوده و سامانه مؤدیان</option><option>اصول حسابداری ۱ و ۲</option></select></label>
+          <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">لینک ویدیو در آپارات
+            <span style="display: flex; gap: 8px"><input class="inp" type="url" value="https://www.aparat.com/v/Qx7Lm" dir="ltr" style="flex: 1; min-width: 0; height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 10px; font: inherit; font-size: 12px; color: #10201E; background: #FFFFFF"><button class="btn" type="button" onClick="{{ check }}" style="height: 46px; padding: 0 12px; border-radius: 12px; border: 1px solid #10201E; background: #FFFFFF; color: #10201E; font: inherit; font-size: 13px; font-weight: 700">بررسی</button></span>
+          </label>
+          <template data-sc="if" value="{{ checked }}" hint-placeholder-val="{{ true }}">
+            <div class="pop" style="display: flex; gap: 10px; align-items: center; padding: 10px; border: 1px solid #CFE3DF; background: #F3F9F7; border-radius: 14px">
+              <span style="flex: none; width: 84px; aspect-ratio: 16 / 9; border-radius: 8px; background: #10201E; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13L18 12z" fill="#FFFFFF"></path></svg></span>
+              <span style="display: flex; flex-direction: column; gap: 2px; font-size: 12px"><span style="color: #0B6E63; font-weight: 700">ویدیو پیدا شد</span><span style="color: #4A5B57">شناسه: <span dir="ltr">Qx7Lm</span></span></span>
+            </div>
+          </template>
+        </section>
+
+        <template data-sc="if" value="{{ checked }}" hint-placeholder-val="{{ true }}">
+          <section class="pop" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 12px">
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">عنوان درس<input class="inp" type="text" value="{{ title }}" onChange="{{ setTitle }}" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">فصل<select class="inp" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 8px; font: inherit; font-size: 13px; color: #10201E; background: #FFFFFF"><option>فصل ۳</option><option>فصل ۴</option></select></label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">مدت<input class="inp" type="text" value="۱۸:۳۰" style="height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 12px; font: inherit; font-size: 14px; color: #10201E; background: #FFFFFF"></label>
+            </div>
+            <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; min-height: 32px"><input type="checkbox" style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">پیش‌نمایش رایگان</label>
+            <button class="btn" type="button" style="height: 48px; border: 1.5px dashed #CFD8D5; border-radius: 12px; background: #FFFFFF; color: #33433F; font: inherit; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V5M7 10l5-5 5 5M5 20h14"></path></svg>افزودن فایل پیوست</button>
+          </section>
+        </template>
+
+        <template data-sc="if" value="{{ added }}" hint-placeholder-val="{{ false }}">
+          <p class="pop" style="font-size: 13px; color: #0B6E63; font-weight: 600; padding: 12px; background: #E3F1EE; border-radius: 14px">درس اضافه شد و برای دانشجویان این دوره نمایش داده می‌شود.</p>
+        </template>
+
+        <section style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; overflow: hidden">
+          <div style="padding: 12px 14px; display: flex; justify-content: space-between; font-size: 13px; background: #FAFBFA"><span style="font-weight: 800">فصل ۳ · اظهارنامه و دفاتر</span><span style="color: #5A6B68">{{ count }}</span></div>
+          <ol style="list-style: none; margin: 0; padding: 0">
+            <template data-sc="for" list="{{ lessons }}" as="l" hint-placeholder-count="4">
+              <li class="{{ l.cls }}" style="display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-top: 1px solid #EEF1F0; font-size: 13px">
+                <span style="flex: none; width: 22px; color: #5A6B68; font-size: 12px">{{ l.num }}</span>
+                <span style="flex: 1; min-width: 0">{{ l.title }}</span>
+                <span style="flex: none; font-size: 11px; color: #5A6B68">{{ l.dur }}</span>
+              </li>
+            </template>
+          </ol>
+        </section>
+      </div>
+    </template>
+
+    <template data-sc="if" value="{{ vList }}" hint-placeholder-val="{{ false }}">
+      <div class="fade" style="display: flex; flex-direction: column; gap: 10px">
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 12px; display: flex; gap: 12px; align-items: center"><span style="flex: none; width: 48px; height: 48px; border-radius: 12px; background: #E7ECF2"></span><span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700">مالیات بر ارزش افزوده و سامانه مؤدیان</span><span style="font-size: 11px; color: #5A6B68">۲۴ درس · ۳۴۰ دانشجو</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #E3F1EE; color: #0B6E63; font-weight: 700">منتشر شده</span></div>
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 12px; display: flex; gap: 12px; align-items: center"><span style="flex: none; width: 48px; height: 48px; border-radius: 12px; background: #E3F1EE"></span><span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700">اصول حسابداری ۱ و ۲</span><span style="font-size: 11px; color: #5A6B68">۴۲ درس · ۲۹۰ دانشجو</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #E3F1EE; color: #0B6E63; font-weight: 700">منتشر شده</span></div>
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 12px; display: flex; gap: 12px; align-items: center"><span style="flex: none; width: 48px; height: 48px; border-radius: 12px; background: #F4ECE2"></span><span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700">حسابداری مالیاتی</span><span style="font-size: 11px; color: #5A6B68">۳۰ درس · ۲۰۵ دانشجو</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #E3F1EE; color: #0B6E63; font-weight: 700">منتشر شده</span></div>
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 12px; display: flex; gap: 12px; align-items: center"><span style="flex: none; width: 48px; height: 48px; border-radius: 12px; background: #EAF0E4"></span><span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 700">تهیه صورت‌های مالی و گزارشگری</span><span style="font-size: 11px; color: #5A6B68">۱۸ درس · پیش‌نویس</span></span><span style="font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #F1F3F2; color: #4A5B57; font-weight: 700">پیش‌نویس</span></div>
+        <button class="btn" type="button" style="height: 50px; border: 1.5px dashed #0B6E63; border-radius: 14px; background: transparent; color: #0B6E63; font: inherit; font-size: 14px; font-weight: 700">+ دوره جدید</button>
+      </div>
+    </template>
+  </main>
+
+  <template data-sc="if" value="{{ vAdd }}" hint-placeholder-val="{{ true }}">
+    <div style="flex: none; background: #FFFFFF; border-top: 1px solid #E3E8E6; padding: 10px 16px 8px">
+      <button class="btn" type="button" onClick="{{ add }}" style="width: 100%; height: 50px; border: 0; border-radius: 14px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 15px; font-weight: 700">افزودن به سرفصل</button>
+    </div>
+  </template>
+
+  <nav aria-label="منوی مدیریت" style="flex: none; background: #FFFFFF; border-top: 1px solid #E3E8E6; padding: 8px 8px 18px; display: flex; justify-content: space-around">
+    <a href="app-admin.html" style="min-width: 70px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #5A6B68; font-size: 11px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+    <a href="app-admin-students.html" style="min-width: 70px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #5A6B68; font-size: 11px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+    <a href="app-admin-courses.html" aria-current="page" style="min-width: 70px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #0B6E63; font-size: 11px; font-weight: 700"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها</a>
+    <a href="app-admin-more.html" style="min-width: 70px; min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: #5A6B68; font-size: 11px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>بیشتر</a>
+  </nav>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'add', checked: true, added: false, title: 'بستن حساب‌ها در پایان فصل', extra: [] };
+  }
+  renderVals() {
+    const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    const s = this.state;
+    const base = [['تهیه اظهارنامه فصلی', '۲۷:۰۰'], ['ثبت‌های خرید و فروش', '۲۵:۳۵'], ['تطبیق دفاتر با سامانه', '۲۳:۴۰'], ['حساب‌های مالیات و عوارض', '۱۹:۵۰'], ['مطالبه و استرداد اعتبار', '۲۱:۱۵'], ['نمونه کامل یک فصل کاری', '۳۲:۲۰'], ['تمرین جامع با اکسل', '۲۲:۰۵']]
+      .map((l) => ({ title: l[0], dur: l[1], cls: '' })).concat(s.extra);
+    const lessons = base.map((l, i) => ({ ...l, num: fa(13 + i) }));
+    const tabs = [['list', 'همه دوره‌ها'], ['add', 'افزودن درس از آپارات']].map(([k, label]) => ({
+      label, sel: s.tab === k ? 'true' : 'false',
+      bg: s.tab === k ? '#FFFFFF' : 'transparent', fg: s.tab === k ? '#10201E' : '#4A5B57',
+      fw: s.tab === k ? '700' : '500', sh: s.tab === k ? '0 4px 12px -6px rgba(16,32,30,.3)' : 'none',
+      pick: () => this.setState({ tab: k })
+    }));
+    return {
+      tabs, vAdd: s.tab === 'add', vList: s.tab === 'list',
+      lessons, count: fa(base.length) + ' درس',
+      checked: s.checked, added: s.added, title: s.title,
+      setTitle: (e) => this.setState({ title: e.target.value }),
+      check: () => this.setState({ checked: true, added: false }),
+      add: () => this.setState({ extra: this.state.extra.concat([{ title: this.state.title || 'درس جدید', dur: '۱۸:۳۰', cls: 'new' }]), checked: false, added: true })
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پنل مدیریت — گواهی‌ها | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F4F6F5}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.sn{transition:background-color .2s ease,color .2s ease}.sn:hover{background:rgba(255,255,255,.07) !important;color:#FFFFFF !important}
+.tr{transition:background-color .2s ease}.tr:hover{background:#F8FAF9 !important}
+.inp{transition:border-color .2s ease,box-shadow .2s ease}.inp:focus{border-color:#0B6E63 !important;box-shadow:0 0 0 4px rgba(11,110,99,.12);outline:0}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.06s}.d2{animation-delay:.12s}.d3{animation-delay:.18s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1.15) both}
+@keyframes pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F4F6F5; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+  <aside style="flex: 1 1 250px; max-width: 100%; background: #0F1E1C; color: #FFFFFF; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px">
+    <a href="admin.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 0 6px">
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 12px; color: #A9B8B5">پنل مدیریت آکادمی</span></span>
+    </a>
+    <nav aria-label="منوی مدیریت" style="display: flex; flex-direction: column; gap: 2px; font-size: 14px">
+      <a class="sn" href="admin.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+      <a class="sn" href="admin-students.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+      <a class="sn" href="admin-courses.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها و درس‌ها</a>
+      <a class="sn" href="admin-orders.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M7 15h3"></path></svg>سفارش‌ها و پرداخت‌ها</a>
+      <a class="sn" href="admin-coupons.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>کدهای تخفیف</a>
+      <a class="sn" href="admin-qa.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg><span style="flex: 1">پرسش و پاسخ</span><span style="min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: #F2B98A; color: #10201E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">۷</span></a>
+      <a class="sn" href="admin-certificates.html" aria-current="page" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی‌ها</a>
+      <a class="sn" href="admin-settings.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>تنظیمات سایت</a>
+    </nav>
+  </aside>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 22px clamp(16px, 3vw, 32px) 40px; display: flex; flex-direction: column; gap: 18px">
+    <h1 style="font-size: 24px; font-weight: 800">گواهی‌ها</h1>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start">
+      <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(170px, 100%), 1fr)); gap: 14px">
+          <div class="rise" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; color: #5A6B68">کل گواهی‌های صادرشده</span><span style="font-size: 24px; font-weight: 800">۳۱۲</span></div>
+          <div class="rise d1" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; color: #5A6B68">صادرشده این ماه</span><span style="font-size: 24px; font-weight: 800">۲۴</span></div>
+          <div class="rise d2" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; color: #5A6B68">نرخ تکمیل دوره‌ها</span><span style="font-size: 24px; font-weight: 800">۳۸٪</span></div>
+        </div>
+
+        <section class="rise d1" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px">
+          <h2 style="font-size: 15px; font-weight: 800">استعلام اعتبار گواهی</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <label for="vq" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">کد استعلام</label>
+            <input id="vq" class="inp" type="text" value="{{ query }}" onChange="{{ setQuery }}" dir="ltr" placeholder="AMQ-1405-0000" style="flex: 1 1 220px; min-width: 0; height: 46px; border: 1px solid #DCE3E0; border-radius: 12px; padding: 0 14px; font: inherit; font-size: 15px; font-weight: 700; color: #10201E; background: #FFFFFF; text-align: right">
+            <button class="btn bp" type="button" onClick="{{ verify }}" style="height: 46px; padding: 0 20px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700">بررسی</button>
+          </div>
+          <template data-sc="if" value="{{ vOk }}" hint-placeholder-val="{{ true }}">
+            <div class="pop" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #F3F9F7; border: 1px solid #CFE3DF; border-radius: 14px; font-size: 13px">
+              <span style="flex: none; width: 34px; height: 34px; border-radius: 50%; background: #0B6E63; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></span>
+              <span style="display: flex; flex-direction: column; gap: 2px"><b style="color: #0B6E63">گواهی معتبر است</b><span>{{ vr.name }} · {{ vr.course }} · صادرشده {{ vr.date }}</span></span>
+            </div>
+          </template>
+          <template data-sc="if" value="{{ vBad }}" hint-placeholder-val="{{ false }}">
+            <div class="pop" style="padding: 12px 14px; background: #FDF6EF; border: 1px solid #EAD3C2; border-radius: 14px; font-size: 13px; color: #9A4515; font-weight: 600">{{ vMsg }}</div>
+          </template>
+          <span style="font-size: 12px; color: #5A6B68">همین استعلام در صفحه عمومی سایت هم برای کارفرماها در دسترس است.</span>
+        </section>
+
+        <section class="rise d2" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden">
+          <div style="padding: 16px 20px; display: flex; justify-content: space-between; align-items: center"><h2 style="font-size: 15px; font-weight: 800">گواهی‌های صادرشده</h2><span style="font-size: 12px; color: #5A6B68">جدیدترین‌ها</span></div>
+          <div style="overflow-x: auto">
+            <table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 13px">
+              <thead><tr style="background: #F6F7F6; color: #5A6B68; text-align: right"><th style="padding: 12px 20px; font-weight: 600">کد استعلام</th><th style="padding: 12px; font-weight: 600">دانشجو</th><th style="padding: 12px; font-weight: 600">دوره</th><th style="padding: 12px; font-weight: 600">تاریخ</th><th style="padding: 12px; font-weight: 600">وضعیت</th><th style="padding: 12px 20px"></th></tr></thead>
+              <tbody>
+                <template data-sc="for" list="{{ rows }}" as="c" hint-placeholder-count="6">
+                  <tr class="tr" style="border-top: 1px solid #EEF1F0; background: {{ c.bg }}">
+                    <td style="padding: 6px 20px"><button class="btn" type="button" onClick="{{ c.pick }}" aria-pressed="{{ c.pressed }}" dir="ltr" style="min-height: 44px; border: 0; background: transparent; padding: 0; font: inherit; font-weight: 700; color: #0B6E63">{{ c.code }}</button></td>
+                    <td style="padding: 6px 12px; font-weight: 600">{{ c.name }}</td>
+                    <td style="padding: 6px 12px">{{ c.course }}</td>
+                    <td style="padding: 6px 12px; color: #5A6B68">{{ c.date }}</td>
+                    <td style="padding: 6px 12px"><span style="padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; background: {{ c.stBg }}; color: {{ c.stFg }}">{{ c.status }}</span></td>
+                    <td style="padding: 6px 20px"><button class="btn bg" type="button" onClick="{{ c.toggle }}" style="height: 36px; padding: 0 12px; border: 1px solid #DCE3E0; border-radius: 10px; background: #FFFFFF; color: {{ c.actFg }}; font: inherit; font-size: 12px; font-weight: 600">{{ c.act }}</button></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <aside class="rise d3" aria-label="قالب و قوانین صدور" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 16px">
+        <h2 style="font-size: 15px; font-weight: 800">پیش‌نمایش گواهی</h2>
+        <div style="aspect-ratio: 1.414 / 1; border-radius: 14px; border: 1px solid #EAD9C8; background: #FDF8F3; padding: 18px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; position: relative; overflow: hidden">
+          <div aria-hidden="true" style="position: absolute; inset: 8px; border: 1px solid #EAD9C8; border-radius: 10px"></div>
+          <svg width="28" height="28" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+          <span style="font-size: 11px; color: #9A4515; font-weight: 700">گواهی پایان دوره</span>
+          <span style="font-size: 17px; font-weight: 800">{{ pv.name }}</span>
+          <span style="font-size: 12px; color: #4A5B57; line-height: 1.8">دوره «{{ pv.course }}» را با موفقیت به پایان رساند</span>
+          <span style="font-size: 10px; color: #5A6B68" dir="ltr">{{ pv.code }}</span>
+          <span style="font-size: 10px; color: #5A6B68">[امضا و مهر شرکت]</span>
+        </div>
+        <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+          <legend style="font-size: 13px; font-weight: 700; margin-bottom: 8px">شرط صدور</legend>
+          <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; min-height: 32px; cursor: pointer"><input type="radio" name="rule" checked style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">تکمیل ۱۰۰٪ درس‌های دوره</label>
+          <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; min-height: 32px; cursor: pointer"><input type="radio" name="rule" style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">تکمیل درس‌ها و قبولی در آزمون پایانی</label>
+        </fieldset>
+        <label style="display: flex; align-items: center; gap: 10px; font-size: 13px; min-height: 32px; cursor: pointer"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">صدور خودکار و ارسال پیامک به دانشجو</label>
+        <button class="btn bg" type="button" style="height: 46px; border: 1.5px dashed #CFD8D5; border-radius: 12px; background: #FFFFFF; color: #33433F; font: inherit; font-size: 13px; font-weight: 600">بارگذاری تصویر امضا و مهر</button>
+        <button class="btn bp" type="button" style="height: 46px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700">ذخیره قالب</button>
+      </aside>
+    </div>
+  </main>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sel: 'AMQ-1405-0128', query: 'AMQ-1405-0128', checked: 'AMQ-1405-0128',
+      revoked: { 'AMQ-1405-0123': true }
+    };
+  }
+  renderVals() {
+    const s = this.state;
+    const data = [
+      ['AMQ-1405-0128', 'سارا محمدی', 'اکسل کاربردی برای حسابداران', '۲ مهر ۱۴۰۵'],
+      ['AMQ-1405-0127', 'نرگس کریمی', 'حسابداری مالیاتی', '۲۸ شهریور ۱۴۰۵'],
+      ['AMQ-1405-0126', 'زهرا نوری', 'اصول حسابداری ۱ و ۲', '۲۰ شهریور ۱۴۰۵'],
+      ['AMQ-1405-0125', 'علی رضایی', 'حقوق و دستمزد', '۱۱ شهریور ۱۴۰۵'],
+      ['AMQ-1405-0124', 'فاطمه حسینی', 'اکسل کاربردی برای حسابداران', '۳ شهریور ۱۴۰۵'],
+      ['AMQ-1405-0123', 'امیر صادقی', 'اکسل کاربردی برای حسابداران', '۱۵ مرداد ۱۴۰۵']
+    ];
+    const all = data.map((d) => ({ code: d[0], name: d[1], course: d[2], date: d[3], bad: !!s.revoked[d[0]] }));
+    const rows = all.map((c) => ({
+      ...c,
+      bg: c.code === s.sel ? '#F1F8F6' : '#FFFFFF',
+      pressed: c.code === s.sel ? 'true' : 'false',
+      status: c.bad ? 'باطل‌شده' : 'معتبر',
+      stBg: c.bad ? '#FBEFE4' : '#E3F1EE', stFg: c.bad ? '#9A4515' : '#0B6E63',
+      act: c.bad ? 'بازگردانی' : 'ابطال', actFg: c.bad ? '#0B6E63' : '#9A4515',
+      pick: () => this.setState({ sel: c.code }),
+      toggle: () => this.setState({ revoked: { ...this.state.revoked, [c.code]: !this.state.revoked[c.code] } })
+    }));
+    const q = String(s.checked || '').trim().toUpperCase();
+    const hit = all.find((c) => c.code === q);
+    const pv = all.find((c) => c.code === s.sel) || all[0];
+    return {
+      rows, pv,
+      query: s.query,
+      setQuery: (e) => this.setState({ query: e.target.value }),
+      verify: () => this.setState({ checked: this.state.query }),
+      vOk: !!hit && !hit.bad,
+      vBad: !hit || hit.bad,
+      vMsg: hit && hit.bad ? 'این گواهی باطل شده و معتبر نیست.' : 'گواهی با این کد پیدا نشد.',
+      vr: hit || all[0]
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

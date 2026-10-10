@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>پنل مدیریت — پرسش و پاسخ | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F4F6F5}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.sn{transition:background-color .2s ease,color .2s ease}.sn:hover{background:rgba(255,255,255,.07) !important;color:#FFFFFF !important}
+.qi{transition:background-color .2s ease}.qi:hover{background:#F8FAF9 !important}
+.inp{transition:border-color .2s ease,box-shadow .2s ease}.inp:focus{border-color:#0B6E63 !important;box-shadow:0 0 0 4px rgba(11,110,99,.12);outline:0}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.pop{animation:pop .45s cubic-bezier(.2,.7,.2,1.15) both}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F4F6F5; min-height: 100vh; display: flex; flex-wrap: wrap">
+
+  <aside style="flex: 1 1 250px; max-width: 100%; background: #0F1E1C; color: #FFFFFF; padding: 22px 16px; display: flex; flex-direction: column; gap: 22px">
+    <a href="admin.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; padding: 0 6px">
+      <svg width="36" height="36" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 800; font-size: 15px">آرمان محاسبات</span><span style="font-size: 12px; color: #A9B8B5">پنل مدیریت آکادمی</span></span>
+    </a>
+    <nav aria-label="منوی مدیریت" style="display: flex; flex-direction: column; gap: 2px; font-size: 14px">
+      <a class="sn" href="admin.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>پیشخوان</a>
+      <a class="sn" href="admin-students.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>دانشجویان</a>
+      <a class="sn" href="admin-courses.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg>دوره‌ها و درس‌ها</a>
+      <a class="sn" href="admin-orders.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M7 15h3"></path></svg>سفارش‌ها و پرداخت‌ها</a>
+      <a class="sn" href="admin-coupons.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle></svg>کدهای تخفیف</a>
+      <a class="sn" href="admin-qa.html" aria-current="page" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,.1); color: #FFFFFF; font-weight: 700"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg><span style="flex: 1">پرسش و پاسخ</span><span style="min-width: 22px; height: 22px; padding: 0 6px; border-radius: 99px; background: #F2B98A; color: #10201E; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">{{ openCount }}</span></a>
+      <a class="sn" href="admin-certificates.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی‌ها</a>
+      <a class="sn" href="admin-settings.html" style="height: 44px; padding: 0 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px; color: #A9B8B5"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg>تنظیمات سایت</a>
+    </nav>
+  </aside>
+
+  <main style="flex: 999 1 640px; min-width: 0; padding: 22px clamp(16px, 3vw, 32px) 40px; display: flex; flex-direction: column; gap: 18px">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <h1 style="font-size: 24px; font-weight: 800">پرسش و پاسخ</h1>
+      <span style="font-size: 13px; color: #5A6B68">پرسش‌هایی که دانشجوها زیر درس‌ها ثبت کرده‌اند · میانگین زمان پاسخ: ۶ ساعت</span>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start">
+      <section class="rise" aria-label="فهرست پرسش‌ها" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden">
+        <div style="padding: 12px; border-bottom: 1px solid #EEF1F0">
+          <div role="tablist" aria-label="فیلتر" style="display: flex; padding: 4px; background: #EBEFEE; border-radius: 12px">
+            <template data-sc="for" list="{{ tabs }}" as="t" hint-placeholder-count="3">
+              <button class="btn" type="button" role="tab" aria-selected="{{ t.sel }}" onClick="{{ t.pick }}" style="flex: 1; height: 38px; border: 0; border-radius: 9px; font: inherit; font-size: 13px; font-weight: {{ t.fw }}; background: {{ t.bg }}; color: {{ t.fg }}; box-shadow: {{ t.sh }}">{{ t.label }}</button>
+            </template>
+          </div>
+        </div>
+        <ul style="list-style: none; margin: 0; padding: 0">
+          <template data-sc="for" list="{{ list }}" as="q" hint-placeholder-count="7">
+            <li style="border-bottom: 1px solid #EEF1F0">
+              <button class="btn qi" type="button" onClick="{{ q.pick }}" aria-pressed="{{ q.pressed }}" style="width: 100%; padding: 14px 16px; border: 0; border-right: 3px solid {{ q.mark }}; background: {{ q.bg }}; font: inherit; color: #10201E; text-align: right; display: flex; flex-direction: column; gap: 6px">
+                <span style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px"><span style="font-weight: 700">{{ q.name }}</span><span style="color: #5A6B68">{{ q.time }}</span></span>
+                <span style="font-size: 13px; line-height: 1.8; color: #33433F">{{ q.text }}</span>
+                <span style="display: flex; justify-content: space-between; gap: 8px; font-size: 11px"><span style="color: #5A6B68">{{ q.where }}</span><span style="font-weight: 700; color: {{ q.stFg }}">{{ q.status }}</span></span>
+              </button>
+            </li>
+          </template>
+        </ul>
+        <template data-sc="if" value="{{ empty }}" hint-placeholder-val="{{ false }}">
+          <p style="padding: 28px; text-align: center; font-size: 14px; color: #5A6B68">پرسش بی‌پاسخی نمانده است.</p>
+        </template>
+      </section>
+
+      <section class="rise d1" aria-label="گفتگو" style="flex: 999 1 460px; min-width: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 16px; border-bottom: 1px solid #EEF1F0">
+          <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #5A6B68">{{ cur.where }}</span><span style="font-size: 16px; font-weight: 800">{{ cur.lesson }}</span></div>
+          <a class="btn bg" href="player.html" style="display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border: 1px solid #DCE3E0; border-radius: 10px; color: #10201E; font-size: 13px; font-weight: 600; background: #FFFFFF"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13L18 12z" fill="currentColor"></path></svg>دیدن درس</a>
+        </div>
+
+        <article style="display: flex; gap: 12px">
+          <span style="flex: none; width: 40px; height: 40px; border-radius: 12px; background: #E7ECF2; color: #2C4A6B; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center">{{ cur.ini }}</span>
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px"><b>{{ cur.name }}</b> <span style="color: #5A6B68">· {{ cur.time }}</span></span><p style="font-size: 15px; line-height: 2; padding: 12px 14px; background: #F6F7F6; border-radius: 4px 14px 14px 14px">{{ cur.text }}</p></div>
+        </article>
+
+        <template data-sc="if" value="{{ cur.done }}" hint-placeholder-val="{{ false }}">
+          <article class="pop" style="display: flex; gap: 12px; margin-right: 40px">
+            <span style="flex: none; width: 40px; height: 40px; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center">م</span>
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px"><b>مدرس دوره</b> <span style="padding: 1px 8px; background: #0B6E63; color: #FFFFFF; border-radius: 999px; font-size: 11px">پاسخ مدرس</span></span><p style="font-size: 15px; line-height: 2; padding: 12px 14px; background: #F3F9F7; border-radius: 4px 14px 14px 14px">{{ cur.answer }}</p></div>
+          </article>
+        </template>
+
+        <template data-sc="if" value="{{ cur.open }}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; flex-direction: column; gap: 12px; padding-top: 6px">
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <template data-sc="for" list="{{ quick }}" as="k" hint-placeholder-count="3">
+                <button class="btn bg" type="button" onClick="{{ k.use }}" style="height: 36px; padding: 0 12px; border: 1px solid #DCE3E0; border-radius: 999px; background: #FFFFFF; font: inherit; font-size: 12px; color: #33433F">{{ k.label }}</button>
+              </template>
+            </div>
+            <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700">پاسخ شما<textarea class="inp" rows="4" value="{{ reply }}" onChange="{{ setReply }}" placeholder="پاسخ را بنویسید…" style="border: 1px solid #DCE3E0; border-radius: 14px; padding: 12px 14px; font: inherit; font-size: 14px; font-weight: 400; line-height: 1.9; color: #10201E; background: #FFFFFF; resize: vertical"></textarea></label>
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+              <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; cursor: pointer; min-height: 32px"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #0B6E63; margin: 0">نمایش پاسخ برای همه دانشجویان این درس</label>
+              <button class="btn bp" type="button" onClick="{{ send }}" style="height: 46px; padding: 0 22px; border: 0; border-radius: 12px; background: #0B6E63; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4L10 14M20 4l-6 16-4-6-6-4z"></path></svg>ارسال پاسخ</button>
+            </div>
+          </div>
+        </template>
+        <template data-sc="if" value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <p class="pop" style="font-size: 13px; color: #0B6E63; font-weight: 600; padding: 10px 12px; background: #F3F9F7; border-radius: 12px">پاسخ ثبت شد و به دانشجو پیامک اطلاع‌رسانی ارسال می‌شود.</p>
+        </template>
+      </section>
+    </div>
+  </main>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tab: 'open', sel: 2, sent: false,
+      reply: 'سلام، فایل تمرین درس اول به پیوست‌ها اضافه شد. یک بار صفحه درس را تازه کنید.',
+      answers: {
+        8: 'در درس ۸ همین حالت را با مثال توضیح داده‌ایم؛ فایل نمونه هم در پیوست‌های همان درس هست.',
+        9: 'سند اصلاحی فقط اختلاف را اصلاح می‌کند و سند معکوس کل ثبت اشتباه را برمی‌گرداند. مثالش در درس ۹ هست.'
+      }
+    };
+  }
+  renderVals() {
+    const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+    const qs = [
+      [1, 'نرگس کریمی', 'مالیات بر ارزش افزوده', 'درس ۱۶ · حساب‌های مالیات و عوارض', '۵ ساعت پیش', 'اگر اعتبار مالیاتی از بدهی بیشتر باشد، ثبت پایان فصل چطور است؟'],
+      [2, 'مهدی احمدی', 'مالیات بر ارزش افزوده', 'درس ۱ · معرفی دوره و نقشه راه', '۱ ساعت پیش', 'فایل اکسل تمرین درس اول کجاست؟ در پیوست‌ها چیزی نمی‌بینم.'],
+      [3, 'زهرا نوری', 'حسابداری مالیاتی', 'درس ۲۲ · استهلاک', 'دیروز', 'استهلاک دارایی‌هایی که وسط سال خریداری شده‌اند را چطور حساب کنیم؟'],
+      [4, 'فاطمه حسینی', 'اصول حسابداری ۱ و ۲', 'درس ۲۲ · تراز آزمایشی', 'دیروز', 'در تراز آزمایشی ستون‌ها برابر نمی‌شوند؛ از کجا خطا را پیدا کنم؟'],
+      [5, 'کیان مرادی', 'حقوق و دستمزد', 'درس ۳ · لیست بیمه', '۲ روز پیش', 'اضافه‌کار در لیست بیمه هم وارد می‌شود؟'],
+      [6, 'علی رضایی', 'مالیات بر ارزش افزوده', 'درس ۱۴ · تطبیق دفاتر با سامانه', '۲ روز پیش', 'تطبیق دفاتر را ماهانه انجام بدهیم یا فصلی؟'],
+      [7, 'سمیرا جعفری', 'صورت‌های مالی و گزارشگری', 'درس ۵ · یادداشت‌های توضیحی', '۳ روز پیش', 'نمونه یادداشت‌های توضیحی را هم در فایل‌ها قرار می‌دهید؟'],
+      [8, 'علی رضایی', 'مالیات بر ارزش افزوده', 'درس ۱۶ · حساب‌های مالیات و عوارض', '۴ روز پیش', 'برای فروش‌های معاف هم باید همین ثبت‌ها را انجام بدهیم؟'],
+      [9, 'سارا محمدی', 'اصول حسابداری ۱ و ۲', 'درس ۹ · اسناد حسابداری', 'هفته پیش', 'تفاوت سند اصلاحی و سند معکوس چیست؟']
+    ];
+    const s = this.state;
+    const all = qs.map((q) => {
+      const done = !!s.answers[q[0]];
+      const parts = q[1].split(' ');
+      return {
+        id: q[0], name: q[1], where: q[2], lesson: q[3], time: q[4], text: q[5],
+        ini: parts[0][0] + ' ' + parts[parts.length - 1][0],
+        done, open: !done, answer: s.answers[q[0]] || '',
+        status: done ? 'پاسخ داده شد' : 'بی‌پاسخ', stFg: done ? '#0B6E63' : '#9A4515'
+      };
+    });
+    const openCount = all.filter((q) => q.open).length;
+    const filtered = s.tab === 'open' ? all.filter((q) => q.open) : s.tab === 'done' ? all.filter((q) => q.done) : all;
+    const list = filtered.map((q) => ({
+      ...q,
+      bg: q.id === s.sel ? '#F1F8F6' : '#FFFFFF',
+      mark: q.id === s.sel ? '#0B6E63' : 'transparent',
+      pressed: q.id === s.sel ? 'true' : 'false',
+      pick: () => this.setState({ sel: q.id, reply: '', sent: false })
+    }));
+    const tabs = [['open', 'بی‌پاسخ (' + fa(openCount) + ')'], ['done', 'پاسخ‌داده'], ['all', 'همه']].map(([k, label]) => ({
+      label, sel: s.tab === k ? 'true' : 'false',
+      bg: s.tab === k ? '#FFFFFF' : 'transparent', fg: s.tab === k ? '#10201E' : '#4A5B57',
+      fw: s.tab === k ? '700' : '500', sh: s.tab === k ? '0 4px 12px -6px rgba(16,32,30,.3)' : 'none',
+      pick: () => this.setState({ tab: k })
+    }));
+    const quick = ['فایل به پیوست درس اضافه شد', 'در درس بعدی کامل توضیح داده شده', 'مثال حل‌شده را در پیوست گذاشتیم'].map((t) => ({ label: t, use: () => this.setState({ reply: t + '.' }) }));
+    const cur = all.find((q) => q.id === s.sel) || all[0];
+    return {
+      tabs, list, quick, cur, openCount: fa(openCount), empty: list.length === 0,
+      reply: s.reply, sent: s.sent,
+      setReply: (e) => this.setState({ reply: e.target.value }),
+      send: () => {
+        const text = (this.state.reply || '').trim() || 'پاسخ شما در درس بعدی کامل توضیح داده شده است.';
+        this.setState({ answers: { ...this.state.answers, [this.state.sel]: text }, reply: '', sent: true });
+      }
+    };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

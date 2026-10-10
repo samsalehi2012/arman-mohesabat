@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>اپ — صفحه دوره | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am p{margin:0}
+.btn{transition:background-color .2s ease,transform .15s ease;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.96)}
+.scroll{scrollbar-width:none}.scroll::-webkit-scrollbar{display:none}.scroll>*{flex-shrink:0}
+.chev{transition:transform .3s cubic-bezier(.2,.7,.2,1)}.rot{transform:rotate(180deg)}
+.open{animation:open .35s cubic-bezier(.2,.7,.2,1) both}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.rise{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.up{animation:up .5s cubic-bezier(.2,.7,.2,1) .3s both}
+@keyframes up{from{transform:translateY(100%)}to{transform:none}}
+.pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.45)}70%{box-shadow:0 0 0 14px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+details summary{list-style:none;cursor:pointer}details summary::-webkit-details-marker{display:none}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:2px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body class="phone-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="width: 390px; height: 844px; background: #F6F7F6; display: flex; flex-direction: column; overflow: hidden">
+
+  <figure style="flex: none; margin: 0; position: relative; height: 230px; background: #10201E; display: flex; align-items: center; justify-content: center; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 28px 28px"></div>
+    <a class="btn" href="app-home.html" aria-label="بازگشت" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 14px; background: rgba(255,255,255,.14); color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+    <button class="btn" type="button" aria-label="اشتراک‌گذاری" style="position: absolute; top: 16px; left: 16px; width: 44px; height: 44px; border-radius: 14px; border: 0; background: rgba(255,255,255,.14); color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"></circle><circle cx="6" cy="12" r="2.5"></circle><circle cx="18" cy="19" r="2.5"></circle><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"></path></svg></button>
+    <button class="btn pulse" type="button" aria-label="پخش ویدیوی معرفی" style="position: relative; width: 64px; height: 64px; border-radius: 50%; border: 0; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13L18 12z" fill="#0B6E63"></path></svg></button>
+    <figcaption style="position: absolute; bottom: 12px; right: 16px; left: 16px; display: flex; justify-content: space-between; color: #FFFFFF; font-size: 12px"><span>ویدیوی معرفی</span><span style="padding: 2px 8px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px">پخش از آپارات</span></figcaption>
+  </figure>
+
+  <main class="scroll" style="flex: 1; overflow-y: auto; padding: 18px 16px 24px; display: flex; flex-direction: column; gap: 18px">
+    <div class="rise" style="display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; gap: 6px"><span style="padding: 3px 10px; background: #E7ECF2; color: #2C4A6B; border-radius: 999px; font-size: 12px; font-weight: 600">مالیات</span><span style="padding: 3px 10px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 999px; font-size: 12px">متوسط</span></div>
+      <h1 style="font-size: 20px; font-weight: 800; line-height: 1.65">مالیات بر ارزش افزوده و سامانه مؤدیان</h1>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12px; color: #4A5B57">
+        <span style="display: flex; align-items: center; gap: 5px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۲۴ درس</span>
+        <span style="display: flex; align-items: center; gap: 5px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۹ ساعت</span>
+        <span style="display: flex; align-items: center; gap: 5px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>گواهی پایان دوره</span>
+      </div>
+    </div>
+
+    <div role="tablist" aria-label="بخش‌های دوره" class="rise d1" style="display: flex; padding: 4px; background: #EBEFEE; border-radius: 14px">
+      <template data-sc="for" list="{{ tabs }}" as="t" hint-placeholder-count="3">
+        <button class="btn" type="button" role="tab" aria-selected="{{ t.sel }}" onClick="{{ t.pick }}" style="flex: 1; height: 40px; border: 0; border-radius: 11px; font: inherit; font-size: 13px; font-weight: {{ t.fw }}; background: {{ t.bg }}; color: {{ t.fg }}; box-shadow: {{ t.sh }}">{{ t.label }}</button>
+      </template>
+    </div>
+
+    <template data-sc="if" value="{{ tabAbout }}" hint-placeholder-val="{{ false }}">
+      <div class="open" style="display: flex; flex-direction: column; gap: 16px">
+        <p style="font-size: 14px; line-height: 2; color: #33433F">از مفاهیم پایه ارزش افزوده تا صدور صورتحساب الکترونیکی، تهیه اظهارنامه و ثبت درست در دفاتر — با مثال‌های واقعی و فایل تمرین.</p>
+        <ul style="list-style: none; margin: 0; padding: 16px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; line-height: 1.8">
+          <li style="display: flex; gap: 8px"><svg style="flex: none; margin-top: 3px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>کار با کارپوشه سامانه مؤدیان</li>
+          <li style="display: flex; gap: 8px"><svg style="flex: none; margin-top: 3px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>صدور، ابطال و اصلاح صورتحساب الکترونیکی</li>
+          <li style="display: flex; gap: 8px"><svg style="flex: none; margin-top: 3px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>تهیه و ارسال اظهارنامه فصلی</li>
+          <li style="display: flex; gap: 8px"><svg style="flex: none; margin-top: 3px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>ثبت‌های حسابداری خرید و فروش مشمول</li>
+        </ul>
+        <div style="display: flex; gap: 12px; align-items: center; padding: 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px">
+          <span style="flex: none; width: 52px; height: 52px; border-radius: 16px; background: #E3F1EE; color: #0B6E63; font-size: 11px; display: flex; align-items: center; justify-content: center">[عکس]</span>
+          <span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 14px">[نام مدرس]</span><span style="font-size: 12px; color: #5A6B68">تیم آموزش آرمان محاسبات قشم</span></span>
+        </div>
+      </div>
+    </template>
+
+    <template data-sc="if" value="{{ tabSyl }}" hint-placeholder-val="{{ true }}">
+      <div class="open" style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; overflow: hidden">
+        <template data-sc="for" list="{{ sections }}" as="sec" hint-placeholder-count="4">
+          <div style="border-bottom: 1px solid #E3E8E6">
+            <button class="btn" type="button" onClick="{{ sec.toggle }}" aria-expanded="{{ sec.expanded }}" style="width: 100%; min-height: 60px; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 0; background: #FFFFFF; font: inherit; color: #10201E; text-align: right">
+              <span style="display: flex; align-items: center; gap: 10px"><span style="width: 30px; height: 30px; border-radius: 9px; background: #E3F1EE; color: #0B6E63; font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center">{{ sec.num }}</span><span style="display: flex; flex-direction: column"><span style="font-weight: 700; font-size: 14px">{{ sec.title }}</span><span style="font-size: 11px; color: #5A6B68">{{ sec.meta }}</span></span></span>
+              <svg class="{{ sec.chevCls }}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5A6B68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+            </button>
+            <template data-sc="if" value="{{ sec.isOpen }}" hint-placeholder-val="{{ true }}">
+              <ol class="open" style="list-style: none; margin: 0; padding: 0 14px 8px">
+                <template data-sc="for" list="{{ sec.lessons }}" as="l" hint-placeholder-count="5">
+                  <li style="display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 48px; border-top: 1px dashed #E3E8E6; font-size: 13px">
+                    <span style="display: flex; gap: 8px; min-width: 0"><span style="flex: none; width: 20px; color: #5A6B68; font-size: 12px">{{ l.num }}</span><span>{{ l.title }}</span></span>
+                    <span style="flex: none; display: flex; align-items: center; gap: 8px; font-size: 11px; color: #5A6B68">
+                      <template data-sc="if" value="{{ l.preview }}" hint-placeholder-val="{{ false }}"><a href="app-player.html" style="padding: 3px 8px; background: #E3F1EE; color: #0B6E63; border-radius: 999px; font-weight: 700">رایگان</a></template>
+                      <template data-sc="if" value="{{ l.locked }}" hint-placeholder-val="{{ true }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8A9794" stroke-width="1.8" stroke-linecap="round" role="img" aria-label="قفل"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></template>
+                      <span>{{ l.dur }}</span>
+                    </span>
+                  </li>
+                </template>
+              </ol>
+            </template>
+          </div>
+        </template>
+      </div>
+    </template>
+
+    <template data-sc="if" value="{{ tabFaq }}" hint-placeholder-val="{{ false }}">
+      <div class="open" style="display: flex; flex-direction: column; gap: 8px">
+        <details open style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 14px; padding: 0 14px"><summary style="min-height: 52px; display: flex; align-items: center; font-weight: 700; font-size: 14px">ویدیوها کجا پخش می‌شوند؟</summary><p style="padding-bottom: 14px; font-size: 13px; line-height: 1.95; color: #4A5B57">روی آپارات میزبانی می‌شوند و داخل همین اپ پخش می‌شوند.</p></details>
+        <details style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 14px; padding: 0 14px"><summary style="min-height: 52px; display: flex; align-items: center; font-weight: 700; font-size: 14px">تا کی به دوره دسترسی دارم؟</summary><p style="padding-bottom: 14px; font-size: 13px; line-height: 1.95; color: #4A5B57">دسترسی دائمی است؛ روی سایت و اپ با همان حساب.</p></details>
+        <details style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 14px; padding: 0 14px"><summary style="min-height: 52px; display: flex; align-items: center; font-weight: 700; font-size: 14px">گواهی چطور صادر می‌شود؟</summary><p style="padding-bottom: 14px; font-size: 13px; line-height: 1.95; color: #4A5B57">بعد از تکمیل همه درس‌ها، از بخش پروفایل › گواهی‌ها.</p></details>
+      </div>
+    </template>
+  </main>
+
+  <div class="up" style="flex: none; background: #FFFFFF; border-top: 1px solid #E3E8E6; padding: 12px 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; box-shadow: 0 -12px 30px -24px rgba(16,32,30,.4)">
+    <span style="display: flex; flex-direction: column; gap: 0">
+      <span style="display: flex; align-items: center; gap: 6px"><span style="font-size: 12px; color: #5A6B68; text-decoration: line-through">۲٬۲۰۰٬۰۰۰</span><span style="padding: 1px 7px; background: #FBEFE4; color: #9A4515; border-radius: 999px; font-size: 11px; font-weight: 700">۱۶٪</span></span>
+      <span><span style="font-size: 19px; font-weight: 800">۱٬۸۵۰٬۰۰۰</span> <span style="font-size: 12px; color: #5A6B68">تومان</span></span>
+    </span>
+    <a class="btn" href="app-checkout.html" style="flex: 1; max-width: 190px; height: 52px; border-radius: 14px; background: #0B6E63; color: #FFFFFF; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">خرید دوره</a>
+  </div>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'syl', open: { 0: true } };
+  }
+  fa(n) { return String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]); }
+  renderVals() {
+    const data = [
+      { title: 'آشنایی با ارزش افزوده', lessons: [['معرفی دوره و نقشه راه', '۰۶:۲۰', true], ['قانون ارزش افزوده در یک نگاه', '۱۸:۴۵', true], ['کالاها و خدمات معاف', '۲۲:۱۰'], ['نرخ مالیات و عوارض', '۱۹:۳۰'], ['اعتبار مالیاتی و نحوه محاسبه', '۲۴:۵۰']] },
+      { title: 'سامانه مؤدیان', lessons: [['ثبت‌نام و ورود به سامانه', '۲۱:۰۵'], ['کارپوشه و شناسه یکتا', '۲۶:۴۰'], ['انواع صورتحساب الکترونیکی', '۲۳:۱۵'], ['صدور صورتحساب نوع اول و دوم', '۲۸:۳۰'], ['ابطال، اصلاح و برگشت از فروش', '۲۲:۵۵'], ['ارسال از طریق شرکت معتمد', '۱۷:۲۰'], ['خطاهای رایج و رفع آن‌ها', '۲۰:۱۰']] },
+      { title: 'اظهارنامه و دفاتر', lessons: [['تهیه اظهارنامه فصلی', '۲۷:۰۰'], ['ثبت‌های خرید و فروش', '۲۵:۳۵'], ['تطبیق دفاتر با سامانه', '۲۳:۴۰'], ['حساب‌های مالیات و عوارض', '۱۹:۵۰'], ['مطالبه و استرداد اعتبار', '۲۱:۱۵'], ['نمونه کامل یک فصل کاری', '۳۲:۲۰'], ['تمرین جامع با اکسل', '۲۲:۰۵']] },
+      { title: 'رسیدگی و جمع‌بندی', lessons: [['رسیدگی و برگ تشخیص', '۲۴:۱۰'], ['اعتراض و هیئت‌ها', '۲۲:۴۵'], ['جرائم رایج و پیشگیری', '۱۹:۲۰'], ['چک‌لیست ماهانه حسابدار', '۱۵:۳۰'], ['جمع‌بندی و آزمون پایانی', '۱۴:۰۵']] }
+    ];
+    const s = this.state;
+    let n = 0;
+    const sections = data.map((sec, i) => ({
+      num: this.fa(i + 1), title: sec.title, meta: this.fa(sec.lessons.length) + ' درس',
+      isOpen: !!s.open[i], expanded: s.open[i] ? 'true' : 'false', chevCls: s.open[i] ? 'chev rot' : 'chev',
+      toggle: () => this.setState({ open: { ...this.state.open, [i]: !this.state.open[i] } }),
+      lessons: sec.lessons.map((l) => { n += 1; return { num: this.fa(n), title: l[0], dur: l[1], preview: !!l[2], locked: !l[2] }; })
+    }));
+    const tabs = [['about', 'معرفی'], ['syl', 'سرفصل‌ها'], ['faq', 'سؤالات']].map(([k, label]) => ({
+      label, sel: s.tab === k ? 'true' : 'false',
+      bg: s.tab === k ? '#FFFFFF' : 'transparent', fg: s.tab === k ? '#10201E' : '#4A5B57',
+      fw: s.tab === k ? '700' : '500', sh: s.tab === k ? '0 4px 12px -6px rgba(16,32,30,.3)' : 'none',
+      pick: () => this.setState({ tab: k })
+    }));
+    return { sections, tabs, tabAbout: s.tab === 'about', tabSyl: s.tab === 'syl', tabFaq: s.tab === 'faq' };
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>آکادمی آرمان محاسبات — صفحه اصلی | آکادمی آرمان محاسبات</title>
+<meta name="description" content="نسخه نمایشی سایت و اپ آموزشی آکادمی آرمان محاسبات قشم">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B6E63">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="آرمان محاسبات">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/proto.css">
+<style>
+body{margin:0;background:#F6F7F6}
+a{color:#0B6E63;text-decoration:none}a:hover{color:#08564D}
+.am{font-family:'Vazirmatn',Tahoma,'Segoe UI',sans-serif;color:#10201E;direction:rtl}
+.am *{box-sizing:border-box}
+.am h1,.am h2,.am h3,.am h4,.am p{margin:0}
+.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .15s ease;cursor:pointer}
+.btn:active{transform:scale(.97)}
+.bp:hover{background:#08564D !important;color:#FFFFFF !important}
+.bg:hover{background:#EDF1F0 !important}
+.bw:hover{background:#FFFFFF !important;color:#10201E !important}
+.lift{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .35s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:0 22px 40px -28px rgba(16,32,30,.5);border-color:#CFD8D5 !important}
+.nl{transition:color .2s ease}.nl:hover{color:#0B6E63 !important}
+.chip{transition:background-color .2s ease,color .2s ease,border-color .2s ease}.chip:hover{border-color:#0B6E63 !important;color:#0B6E63 !important}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}.d4{animation-delay:.32s}.d5{animation-delay:.45s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.float{animation:float 7s ease-in-out infinite}
+.float2{animation:float 8s ease-in-out 1.2s infinite}
+@keyframes float{50%{transform:translateY(-9px)}}
+.bar{transform-origin:right center;animation:grow 1.2s cubic-bezier(.2,.7,.2,1) .5s both}
+@keyframes grow{from{transform:scaleX(0)}}
+.ring{animation:ring 1.6s cubic-bezier(.2,.7,.2,1) .6s both}
+@keyframes ring{from{stroke-dashoffset:100}}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.4s cubic-bezier(.4,0,.2,1) .9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pulse{animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.45)}70%{box-shadow:0 0 0 16px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.am :focus-visible{outline:2px solid #0B6E63;outline-offset:3px;border-radius:10px}
+@media (prefers-reduced-motion:reduce){.am *{animation:none !important;transition:none !important}.draw{stroke-dashoffset:0 !important}}
+</style>
+</head>
+<body class="web-page">
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="am" dir="rtl" style="background: #F6F7F6; min-height: 100vh">
+
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 10; background: rgba(246,247,246,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #E3E8E6">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 14px clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="index.html" style="display: flex; align-items: center; gap: 12px; color: #10201E">
+        <svg width="38" height="38" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg>
+        <span style="display: flex; flex-direction: column; line-height: 1.35">
+          <span style="font-weight: 800; font-size: 17px">آرمان محاسبات</span>
+          <span style="font-size: 12px; color: #5A6B68">آکادمی آموزش حسابداری · قشم</span>
+        </span>
+      </a>
+      <nav aria-label="منوی اصلی" style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 15px; font-weight: 500">
+        <a class="nl" href="#courses" style="color: #33433F">دوره‌ها</a>
+        <a class="nl" href="#how" style="color: #33433F">روش یادگیری</a>
+        <a class="nl" href="#app" style="color: #33433F">اپلیکیشن</a>
+        <a class="nl" href="#about" style="color: #33433F">درباره ما</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 10px">
+        <label style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 12px; color: #5A6B68">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input type="search" placeholder="جستجوی دوره…" aria-label="جستجوی دوره" style="border: 0; outline: 0; background: transparent; font: inherit; font-size: 14px; width: 150px; color: #10201E">
+        </label>
+        <a class="btn bp" href="dashboard.html" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; background: #0B6E63; color: #FFFFFF; border-radius: 12px; font-weight: 600; font-size: 14px">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+          ورود / ثبت‌نام
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="position: relative; overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(#E4E9E7 1px, transparent 1px), linear-gradient(90deg, #E4E9E7 1px, transparent 1px); background-size: 56px 56px; -webkit-mask-image: radial-gradient(ellipse 70% 80% at 30% 40%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 70% 80% at 30% 40%, #000 20%, transparent 75%)"></div>
+    <div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 80px clamp(16px, 4vw, 32px) 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 56px; align-items: center">
+
+      <div style="display: flex; flex-direction: column; gap: 26px">
+        <span class="rise" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 999px; font-size: 13px; color: #33433F">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #0B6E63"></span>
+          آکادمی آنلاین شرکت آرمان محاسبات قشم
+        </span>
+        <h1 class="rise d1" style="font-size: clamp(34px, 4vw, 54px); line-height: 1.55; font-weight: 800; text-wrap: balance">
+          حسابداری را از دل
+          <span style="position: relative; display: inline-block; color: #0B6E63">کار واقعی
+            <svg aria-hidden="true" viewBox="0 0 200 14" preserveAspectRatio="none" style="position: absolute; right: 0; left: 0; bottom: -2px; width: 100%; height: 12px"><path class="draw" pathLength="1" d="M4 9 C 50 3, 120 3, 196 8" fill="none" stroke="#F2B98A" stroke-width="5" stroke-linecap="round"></path></svg>
+          </span>
+          یاد بگیرید
+        </h1>
+        <p class="rise d2" style="font-size: 17px; line-height: 2.05; color: #4A5B57; max-width: 540px; text-wrap: pretty">دوره‌های ویدیویی تیم آرمان محاسبات؛ از اصول حسابداری تا مالیات، اکسل و حقوق و دستمزد. هر دوره بعد از خرید برای همیشه در پنل شماست و پیشرفتتان درس‌به‌درس ثبت می‌شود.</p>
+        <div class="rise d3" style="display: flex; flex-wrap: wrap; gap: 12px">
+          <a class="btn bp" href="#courses" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 26px; background: #0B6E63; color: #FFFFFF; border-radius: 14px; font-weight: 700; font-size: 16px">
+            مشاهده دوره‌ها
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+          </a>
+          <a class="btn bg" href="dashboard.html" style="display: inline-flex; align-items: center; height: 52px; padding: 0 24px; background: #FFFFFF; color: #10201E; border: 1px solid #DCE3E0; border-radius: 14px; font-weight: 600; font-size: 16px">ورود به پنل دانشجو</a>
+        </div>
+        <ul class="rise d4" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 14px; color: #4A5B57">
+          <li style="display: flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>دسترسی همیشگی بعد از خرید</li>
+          <li style="display: flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>روی سایت و اپ موبایل</li>
+          <li style="display: flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>گواهی پایان دوره</li>
+        </ul>
+      </div>
+
+      <!-- Hero visual -->
+      <div class="rise d2" style="position: relative; min-height: 470px; display: flex; align-items: center; justify-content: center; padding: 24px 0">
+        <div style="width: 100%; max-width: 440px; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 24px; padding: 18px; box-shadow: 0 40px 80px -48px rgba(16,32,30,.45); display: flex; flex-direction: column; gap: 16px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <div style="display: flex; flex-direction: column; gap: 2px">
+              <span style="font-size: 12px; color: #5A6B68">ادامه یادگیری</span>
+              <span style="font-size: 15px; font-weight: 700">مالیات بر ارزش افزوده و سامانه مؤدیان</span>
+            </div>
+            <span style="font-size: 12px; color: #0B6E63; background: #E3F1EE; padding: 4px 10px; border-radius: 999px; white-space: nowrap">درس ۱۶ از ۲۴</span>
+          </div>
+          <div style="position: relative; aspect-ratio: 16 / 9; border-radius: 16px; background: #10201E; overflow: hidden; display: flex; align-items: center; justify-content: center">
+            <div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 28px 28px"></div>
+            <span class="pulse" style="position: relative; width: 62px; height: 62px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13L18 12z" fill="#0B6E63"></path></svg>
+            </span>
+            <span style="position: absolute; bottom: 12px; right: 14px; font-size: 12px; color: rgba(255,255,255,.82)">درس ۱۶ · حساب‌های مالیات و عوارض</span>
+            <span style="position: absolute; bottom: 12px; left: 14px; font-size: 12px; color: rgba(255,255,255,.82)">۱۸:۴۰</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; font-size: 13px"><span style="color: #5A6B68">پیشرفت دوره</span><span style="font-weight: 700">۶۲٪</span></div>
+            <div style="height: 8px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="width: 62%; height: 100%; background: #0B6E63; border-radius: 99px"></div></div>
+          </div>
+        </div>
+
+        <div class="float" style="position: absolute; top: 0; left: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 24px 48px -32px rgba(16,32,30,.5)">
+          <svg width="52" height="52" viewBox="0 0 52 52" role="img" aria-label="۶۲ درصد پیشرفت"><circle cx="26" cy="26" r="21" fill="none" stroke="#EDF1F0" stroke-width="6"></circle><circle class="ring" cx="26" cy="26" r="21" fill="none" stroke="#0B6E63" stroke-width="6" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="38" transform="rotate(-90 26 26)"></circle></svg>
+          <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #5A6B68">پیشرفت کلی</span><span style="font-size: 18px; font-weight: 800">۶۲٪</span></div>
+        </div>
+
+        <div class="float2" style="position: absolute; bottom: 0; right: 0; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 18px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 24px 48px -32px rgba(16,32,30,.5)">
+          <span style="width: 42px; height: 42px; border-radius: 12px; background: #FBEFE4; display: flex; align-items: center; justify-content: center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B4541A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"></circle><path d="M8.5 14L7 22l5-3 5 3-1.5-8"></path></svg>
+          </span>
+          <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 700">گواهی پایان دوره صادر شد</span><span style="font-size: 12px; color: #5A6B68">اکسل کاربردی برای حسابداران</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" style="background: #FFFFFF; border-top: 1px solid #E3E8E6; border-bottom: 1px solid #E3E8E6">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(16px, 4vw, 32px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 40px; font-weight: 300; color: #0B6E63; line-height: 1">۰۱</span>
+        <h3 style="font-size: 19px; font-weight: 700">دوره را انتخاب و خرید کنید</h3>
+        <p style="font-size: 15px; line-height: 1.95; color: #4A5B57">با شماره موبایل وارد شوید و از درگاه بانکی پرداخت کنید؛ دوره همان لحظه در پنل شما فعال می‌شود.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 40px; font-weight: 300; color: #0B6E63; line-height: 1">۰۲</span>
+        <h3 style="font-size: 19px; font-weight: 700">هر زمان، روی هر دستگاه ببینید</h3>
+        <p style="font-size: 15px; line-height: 1.95; color: #4A5B57">ویدیوها روی سایت و اپ موبایل پخش می‌شوند و از همان درسی که رها کرده‌اید ادامه پیدا می‌کنند.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span style="font-size: 40px; font-weight: 300; color: #0B6E63; line-height: 1">۰۳</span>
+        <h3 style="font-size: 19px; font-weight: 700">پیشرفت و گواهی بگیرید</h3>
+        <p style="font-size: 15px; line-height: 1.95; color: #4A5B57">درصد پیشرفت هر دوره را ببینید و بعد از تکمیل همه درس‌ها، گواهی پایان دوره را از پنل دریافت کنید.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses" style="max-width: 1200px; margin: 0 auto; padding: 88px clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 32px">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <h2 style="font-size: clamp(26px, 2.6vw, 36px); font-weight: 800; line-height: 1.5">دوره‌های آکادمی</h2>
+        <p style="font-size: 16px; color: #4A5B57">کاربردی، مرحله‌به‌مرحله و همراه با فایل تمرین</p>
+      </div>
+      <a href="course.html" style="display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px">همه دوره‌ها
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+      </a>
+    </div>
+    <div role="group" aria-label="دسته‌بندی دوره‌ها" style="display: flex; flex-wrap: wrap; gap: 10px">
+      <button class="btn" type="button" aria-pressed="true" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #10201E; background: #10201E; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600">همه</button>
+      <button class="btn chip" type="button" aria-pressed="false" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #33433F; font: inherit; font-size: 14px">حسابداری</button>
+      <button class="btn chip" type="button" aria-pressed="false" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #33433F; font: inherit; font-size: 14px">مالیات</button>
+      <button class="btn chip" type="button" aria-pressed="false" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #33433F; font: inherit; font-size: 14px">اکسل و نرم‌افزار</button>
+      <button class="btn chip" type="button" aria-pressed="false" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #33433F; font: inherit; font-size: 14px">حقوق و دستمزد</button>
+      <button class="btn chip" type="button" aria-pressed="false" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #DCE3E0; background: #FFFFFF; color: #33433F; font: inherit; font-size: 14px">گزارشگری مالی</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 24px">
+
+      <a href="course.html" class="lift rise d1" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden; color: #10201E">
+        <div style="position: relative; height: 172px; background-color: #E3F1EE; background-image: linear-gradient(rgba(11,110,99,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(11,110,99,.09) 1px, transparent 1px); background-size: 24px 24px; display: flex; align-items: center; justify-content: center">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"></path><path d="M4 9h16M12 9v11"></path></svg>
+          <span style="position: absolute; top: 14px; right: 14px; padding: 4px 12px; background: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #0B6E63">مقدماتی</span>
+          <span style="position: absolute; bottom: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(16,32,30,.78); color: #FFFFFF; border-radius: 999px; font-size: 12px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5.5v13L17 12z" fill="#FFFFFF"></path></svg>پیش‌نمایش رایگان</span>
+        </div>
+        <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-size: 13px; color: #5A6B68">حسابداری</span>
+          <h3 style="font-size: 18px; font-weight: 700; line-height: 1.7">اصول حسابداری ۱ و ۲</h3>
+          <div style="display: flex; gap: 18px; font-size: 13px; color: #5A6B68">
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۴۲ درس</span>
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۱۶ ساعت</span>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed #E3E8E6; display: flex; align-items: center; justify-content: space-between">
+            <span><span style="font-size: 19px; font-weight: 800">۱٬۴۵۰٬۰۰۰</span> <span style="font-size: 13px; color: #5A6B68">تومان</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: #0B6E63">مشاهده<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="course.html" class="lift rise d2" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden; color: #10201E">
+        <div style="position: relative; height: 172px; background-color: #F4ECE2; background-image: linear-gradient(rgba(138,75,23,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(138,75,23,.09) 1px, transparent 1px); background-size: 24px 24px; display: flex; align-items: center; justify-content: center">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#8A4B17" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6M9 16h3"></path></svg>
+          <span style="position: absolute; top: 14px; right: 14px; padding: 4px 12px; background: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #8A4B17">پیشرفته</span>
+        </div>
+        <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-size: 13px; color: #5A6B68">مالیات</span>
+          <h3 style="font-size: 18px; font-weight: 700; line-height: 1.7">حسابداری مالیاتی و قانون مالیات‌های مستقیم</h3>
+          <div style="display: flex; gap: 18px; font-size: 13px; color: #5A6B68">
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۳۰ درس</span>
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۱۲ ساعت</span>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed #E3E8E6; display: flex; align-items: center; justify-content: space-between">
+            <span><span style="font-size: 19px; font-weight: 800">۲٬۲۰۰٬۰۰۰</span> <span style="font-size: 13px; color: #5A6B68">تومان</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: #0B6E63">مشاهده<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="course.html" class="lift rise d3" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden; color: #10201E">
+        <div style="position: relative; height: 172px; background-color: #E7ECF2; background-image: linear-gradient(rgba(44,74,107,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(44,74,107,.09) 1px, transparent 1px); background-size: 24px 24px; display: flex; align-items: center; justify-content: center">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#2C4A6B" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5L5 19"></path><circle cx="7" cy="7" r="2.5"></circle><circle cx="17" cy="17" r="2.5"></circle></svg>
+          <span style="position: absolute; top: 14px; right: 14px; padding: 4px 12px; background: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #2C4A6B">متوسط</span>
+          <span style="position: absolute; bottom: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(16,32,30,.78); color: #FFFFFF; border-radius: 999px; font-size: 12px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5.5v13L17 12z" fill="#FFFFFF"></path></svg>پیش‌نمایش رایگان</span>
+        </div>
+        <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-size: 13px; color: #5A6B68">مالیات</span>
+          <h3 style="font-size: 18px; font-weight: 700; line-height: 1.7">مالیات بر ارزش افزوده و سامانه مؤدیان</h3>
+          <div style="display: flex; gap: 18px; font-size: 13px; color: #5A6B68">
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۲۴ درس</span>
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۹ ساعت</span>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed #E3E8E6; display: flex; align-items: center; justify-content: space-between">
+            <span><span style="font-size: 19px; font-weight: 800">۱٬۸۵۰٬۰۰۰</span> <span style="font-size: 13px; color: #5A6B68">تومان</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: #0B6E63">مشاهده<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="course.html" class="lift rise d2" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden; color: #10201E">
+        <div style="position: relative; height: 172px; background-color: #EAF0E4; background-image: linear-gradient(rgba(63,107,46,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(63,107,46,.09) 1px, transparent 1px); background-size: 24px 24px; display: flex; align-items: center; justify-content: center">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3F6B2E" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16M15 4v16"></path></svg>
+          <span style="position: absolute; top: 14px; right: 14px; padding: 4px 12px; background: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #3F6B2E">مقدماتی</span>
+          <span style="position: absolute; bottom: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(16,32,30,.78); color: #FFFFFF; border-radius: 999px; font-size: 12px"><svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5.5v13L17 12z" fill="#FFFFFF"></path></svg>پیش‌نمایش رایگان</span>
+        </div>
+        <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-size: 13px; color: #5A6B68">اکسل و نرم‌افزار</span>
+          <h3 style="font-size: 18px; font-weight: 700; line-height: 1.7">اکسل کاربردی برای حسابداران</h3>
+          <div style="display: flex; gap: 18px; font-size: 13px; color: #5A6B68">
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۳۶ درس</span>
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۱۴ ساعت</span>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed #E3E8E6; display: flex; align-items: center; justify-content: space-between">
+            <span><span style="font-size: 19px; font-weight: 800">۱٬۲۰۰٬۰۰۰</span> <span style="font-size: 13px; color: #5A6B68">تومان</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: #0B6E63">مشاهده<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="course.html" class="lift rise d3" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden; color: #10201E">
+        <div style="position: relative; height: 172px; background-color: #E3F1EE; background-image: linear-gradient(rgba(11,110,99,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(11,110,99,.09) 1px, transparent 1px); background-size: 24px 24px; display: flex; align-items: center; justify-content: center">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"></path></svg>
+          <span style="position: absolute; top: 14px; right: 14px; padding: 4px 12px; background: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #0B6E63">متوسط</span>
+        </div>
+        <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-size: 13px; color: #5A6B68">حقوق و دستمزد</span>
+          <h3 style="font-size: 18px; font-weight: 700; line-height: 1.7">حقوق و دستمزد و بیمه تأمین اجتماعی</h3>
+          <div style="display: flex; gap: 18px; font-size: 13px; color: #5A6B68">
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۲۰ درس</span>
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۷ ساعت</span>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed #E3E8E6; display: flex; align-items: center; justify-content: space-between">
+            <span><span style="font-size: 19px; font-weight: 800">۹۸۰٬۰۰۰</span> <span style="font-size: 13px; color: #5A6B68">تومان</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: #0B6E63">مشاهده<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="course.html" class="lift rise d4" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 20px; overflow: hidden; color: #10201E">
+        <div style="position: relative; height: 172px; background-color: #F4ECE2; background-image: linear-gradient(rgba(138,75,23,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(138,75,23,.09) 1px, transparent 1px); background-size: 24px 24px; display: flex; align-items: center; justify-content: center">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#8A4B17" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16v-5M11 16V6M16 16v-8"></path></svg>
+          <span style="position: absolute; top: 14px; right: 14px; padding: 4px 12px; background: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 600; color: #8A4B17">پیشرفته</span>
+        </div>
+        <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-size: 13px; color: #5A6B68">گزارشگری مالی</span>
+          <h3 style="font-size: 18px; font-weight: 700; line-height: 1.7">تهیه صورت‌های مالی و گزارشگری</h3>
+          <div style="display: flex; gap: 18px; font-size: 13px; color: #5A6B68">
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"></path></svg>۲۸ درس</span>
+            <span style="display: flex; align-items: center; gap: 6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>۱۱ ساعت</span>
+          </div>
+          <div style="margin-top: auto; padding-top: 16px; border-top: 1px dashed #E3E8E6; display: flex; align-items: center; justify-content: space-between">
+            <span><span style="font-size: 19px; font-weight: 800">۲٬۴۵۰٬۰۰۰</span> <span style="font-size: 13px; color: #5A6B68">تومان</span></span>
+            <span style="display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; color: #0B6E63">مشاهده<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Learning experience -->
+  <section style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) 96px">
+    <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 28px; padding: clamp(24px, 4vw, 56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px; align-items: center">
+      <div style="display: flex; flex-direction: column; gap: 22px">
+        <h2 style="font-size: clamp(24px, 2.4vw, 34px); font-weight: 800; line-height: 1.6">همیشه می‌دانید کجای مسیر هستید</h2>
+        <p style="font-size: 16px; line-height: 2; color: #4A5B57">هر درسی که کامل می‌کنید در پروفایل‌تان ثبت می‌شود. پنل دانشجو نشان می‌دهد از هر دوره چند درصد را گذرانده‌اید و دفعه بعد از کجا ادامه بدهید.</p>
+        <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px 24px; font-size: 15px">
+          <li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #E3F1EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span><span style="line-height: 1.8">درصد پیشرفت هر دوره، درس‌به‌درس</span></li>
+          <li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #E3F1EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5.5v13L18 12z"></path></svg></span><span style="line-height: 1.8">ادامه از آخرین درسِ دیده‌شده</span></li>
+          <li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #E3F1EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg></span><span style="line-height: 1.8">فایل‌های تمرین و نمونه‌اسناد</span></li>
+          <li style="display: flex; gap: 12px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 10px; background: #E3F1EE; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B6E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"></path></svg></span><span style="line-height: 1.8">پرسش و پاسخ زیر هر درس</span></li>
+        </ul>
+      </div>
+      <div style="background: #F6F7F6; border: 1px solid #E3E8E6; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
+        <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-weight: 700; font-size: 15px">دوره‌های من</span><span style="font-size: 12px; color: #5A6B68">۳ دوره فعال</span></div>
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px"><span style="font-weight: 600">مالیات بر ارزش افزوده و سامانه مؤدیان</span><span style="font-weight: 700; color: #0B6E63">۶۲٪</span></div>
+          <div style="height: 6px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="width: 62%; height: 100%; background: #0B6E63; border-radius: 99px"></div></div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px"><span style="font-weight: 600">اصول حسابداری ۱ و ۲</span><span style="font-weight: 700; color: #0B6E63">۲۸٪</span></div>
+          <div style="height: 6px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="width: 28%; height: 100%; background: #0B6E63; border-radius: 99px; animation-delay: .65s"></div></div>
+        </div>
+        <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+          <div style="display: flex; justify-content: space-between; gap: 12px; font-size: 14px"><span style="font-weight: 600">اکسل کاربردی برای حسابداران</span><span style="font-weight: 700; color: #B4541A; display: inline-flex; align-items: center; gap: 4px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>۱۰۰٪</span></div>
+          <div style="height: 6px; background: #EDF1F0; border-radius: 99px; overflow: hidden"><div class="bar" style="width: 100%; height: 100%; background: #B4541A; border-radius: 99px; animation-delay: .8s"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PWA -->
+  <section id="app" style="background: #10201E; color: #FFFFFF; overflow: hidden">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px clamp(16px, 4vw, 32px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 56px; align-items: center">
+      <div style="display: flex; flex-direction: column; gap: 22px">
+        <span style="align-self: flex-start; padding: 6px 14px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; font-size: 13px; color: #CFE3DF">اپلیکیشن وب (PWA)</span>
+        <h2 style="font-size: clamp(26px, 2.8vw, 38px); font-weight: 800; line-height: 1.6">آکادمی، روی صفحه اصلی گوشی شما</h2>
+        <p style="font-size: 16px; line-height: 2.05; color: #C3D2CF; max-width: 520px">بدون نیاز به استور نصب می‌شود و همه امکانات سایت را دارد: خرید دوره، تماشای ویدیوها، درصد پیشرفت، فایل‌های تمرین، پرسش و پاسخ و گواهی پایان دوره. با یک حساب، پیشرفتتان روی سایت و اپ یکی است.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <a class="btn bw" href="app-home.html" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; background: #F2B98A; color: #10201E; border-radius: 14px; font-weight: 700; font-size: 15px">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"></rect><path d="M12 7v6M9.5 10.5L12 13l2.5-2.5"></path></svg>
+            نصب اپ روی گوشی
+          </a>
+          <a class="btn" href="app-home.html" style="display: inline-flex; align-items: center; height: 52px; padding: 0 22px; border: 1px solid rgba(255,255,255,.28); color: #FFFFFF; border-radius: 14px; font-weight: 600; font-size: 15px">راهنمای نصب در آیفون</a>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center">
+        <div class="float" style="width: 270px; height: 540px; border-radius: 40px; background: #F6F7F6; border: 8px solid #2A3A37; padding: 22px 16px; display: flex; flex-direction: column; gap: 12px; color: #10201E; box-shadow: 0 50px 90px -40px rgba(0,0,0,.7)">
+          <div style="display: flex; align-items: center; gap: 8px"><svg width="28" height="28" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg><span style="font-weight: 800; font-size: 14px">آرمان محاسبات</span></div>
+          <div style="background: #0B6E63; color: #FFFFFF; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 8px">
+            <span style="font-size: 11px; opacity: .85">ادامه یادگیری</span>
+            <span style="font-size: 13px; font-weight: 700">سامانه مؤدیان · درس ۱۶</span>
+            <div style="height: 5px; background: rgba(255,255,255,.25); border-radius: 99px; overflow: hidden"><div class="bar" style="width: 62%; height: 100%; background: #FFFFFF; border-radius: 99px"></div></div>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 14px; padding: 12px; display: flex; gap: 10px; align-items: center"><span style="width: 40px; height: 40px; border-radius: 10px; background: #F4ECE2"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 700">حسابداری مالیاتی</span><span style="font-size: 11px; color: #5A6B68">۳۰ درس</span></span></div>
+          <div style="background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 14px; padding: 12px; display: flex; gap: 10px; align-items: center"><span style="width: 40px; height: 40px; border-radius: 10px; background: #EAF0E4"></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 700">اکسل برای حسابداران</span><span style="font-size: 11px; color: #5A6B68">۳۶ درس</span></span></div>
+          <div style="margin-top: auto; background: #FFFFFF; border: 1px solid #E3E8E6; border-radius: 16px; padding: 10px 6px; display: flex; justify-content: space-around; font-size: 10px; color: #5A6B68">
+            <span style="display: flex; flex-direction: column; align-items: center; gap: 3px; color: #0B6E63; font-weight: 700"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg>خانه</span>
+            <span style="display: flex; flex-direction: column; align-items: center; gap: 3px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path></svg>یادگیری من</span>
+            <span style="display: flex; flex-direction: column; align-items: center; gap: 3px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>پروفایل</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About + CTA -->
+  <section id="about" style="max-width: 1200px; margin: 0 auto; padding: 88px clamp(16px, 4vw, 32px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 40px; align-items: center">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <span style="font-size: 14px; font-weight: 600; color: #0B6E63">درباره ما</span>
+      <h2 style="font-size: clamp(24px, 2.4vw, 32px); font-weight: 800; line-height: 1.6">شرکت آرمان محاسبات قشم</h2>
+      <p style="font-size: 16px; line-height: 2.05; color: #4A5B57">آرمان محاسبات قشم در زمینه ارائه خدمات مالی و حسابداری فعالیت می‌کند. این آکادمی، تجربه کار حرفه‌ای تیم را در قالب دوره‌های ویدیویی کاربردی در اختیار شما می‌گذارد.</p>
+    </div>
+    <div style="background: #E3F1EE; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+      <h3 style="font-size: 22px; font-weight: 800; line-height: 1.6">اولین دوره‌تان را همین امروز شروع کنید</h3>
+      <p style="font-size: 15px; line-height: 1.9; color: #33433F">درس‌های پیش‌نمایش رایگان را ببینید و اگر مناسب بود، دوره را خرید کنید.</p>
+      <a class="btn bp" href="course.html" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 24px; background: #0B6E63; color: #FFFFFF; border-radius: 14px; font-weight: 700; font-size: 15px">شروع با درس‌های رایگان
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #FFFFFF; border-top: 1px solid #E3E8E6">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(16px, 4vw, 32px) 28px; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 32px">
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="34" height="34" viewBox="0 0 38 38" aria-hidden="true"><rect width="38" height="38" rx="11" fill="#0B6E63"></rect><path d="M11 26h16M11 19.5h10.5M11 13h6" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"></path><circle cx="26.5" cy="13" r="2.8" fill="#F2B98A"></circle></svg><span style="font-weight: 800; font-size: 16px">آرمان محاسبات قشم</span></div>
+          <p style="font-size: 14px; line-height: 1.9; color: #5A6B68">آکادمی آموزش حسابداری، مالیات و امور مالی</p>
+        </div>
+        <nav aria-label="آکادمی" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+          <span style="font-weight: 700; margin-bottom: 4px">آکادمی</span>
+          <a class="nl" href="#courses" style="color: #4A5B57">همه دوره‌ها</a>
+          <a class="nl" href="dashboard.html" style="color: #4A5B57">پنل دانشجو</a>
+          <a class="nl" href="#app" style="color: #4A5B57">نصب اپلیکیشن</a>
+        </nav>
+        <nav aria-label="پشتیبانی" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+          <span style="font-weight: 700; margin-bottom: 4px">پشتیبانی</span>
+          <a class="nl" href="course.html" style="color: #4A5B57">سؤالات متداول</a>
+          <a class="nl" href="#about" style="color: #4A5B57">قوانین و حریم خصوصی</a>
+          <a class="nl" href="#about" style="color: #4A5B57">تماس با ما</a>
+        </nav>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #4A5B57">
+          <span style="font-weight: 700; margin-bottom: 4px; color: #10201E">تماس</span>
+          <span>[آدرس دفتر — قشم]</span>
+          <span>[شماره تماس]</span>
+          <span style="width: 88px; height: 88px; border: 1px dashed #CFD8D5; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; color: #5A6B68; padding: 6px">[نماد اعتماد]</span>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #E3E8E6; padding-top: 20px; font-size: 13px; color: #5A6B68">© ۱۴۰۵ — تمامی حقوق برای شرکت آرمان محاسبات قشم محفوظ است.</div>
+    </div>
+  </footer>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-logic">
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+<script src="assets/dc-lite.js" defer></script>
+<noscript><p style="font-family:Tahoma,sans-serif;padding:24px;direction:rtl">برای دیدن این نسخه نمایشی، جاوااسکریپت مرورگر را روشن کنید.</p></noscript>
+</body>
+</html>
