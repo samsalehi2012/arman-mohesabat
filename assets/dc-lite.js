@@ -1,5 +1,5 @@
 /*!
- * dc-lite — runtime سبک برای پروتوتایپ آکادمی آرمان محاسبات
+ * dc-lite — runtime سبک برای پروتوتایپ آرمان محاسبات قشم
  * قالب صفحه را از <template id="dc-tpl"> می‌خواند، منطق را از #dc-logic اجرا می‌کند
  * و با هر تغییر وضعیت فقط بخش‌های تغییرکرده‌ی DOM را به‌روز می‌کند.
  */
@@ -217,7 +217,7 @@
       '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>' +
       '<span>همه صفحه‌ها</span></button>' +
       '<div class="proto-nav-panel" id="proto-nav-panel" role="dialog" aria-label="فهرست صفحه‌های پروتوتایپ" hidden>' +
-      '<div class="proto-nav-head"><b>نسخه نمایشی آکادمی آرمان محاسبات</b><span>داده‌ها نمونه هستند</span></div>';
+      '<div class="proto-nav-head"><b>نسخه نمایشی آرمان محاسبات قشم</b><span>داده‌ها نمونه هستند</span></div>';
     PAGES.forEach(function (g) {
       html += '<div class="proto-nav-group"><span class="proto-nav-gt">' + g[0] + '</span>';
       g[1].forEach(function (p) {
